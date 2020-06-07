@@ -3,7 +3,30 @@ const Schema = mongoose.Schema
 
 var User = new Schema(
   {
-    // Yada yada
+    userId:{
+      type: String
+  },
+  idUsuario:{
+    type: String
+  },
+  userType:{
+    type: String
+  },
+  idType:{
+    type: String
+  },
+  idNumber:{
+    type: String
+  },
+  address:{
+    type: String
+  },
+  email:{
+    type: String
+  },
+  phoneNumber:{
+    type: String
+  },
   },
   {
     collection: 'users'

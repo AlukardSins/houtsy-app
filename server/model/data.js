@@ -3,7 +3,21 @@ const Schema = mongoose.Schema
 
 var Data = new Schema(
   {
-    // Yada yada
+    serviceId:{
+      type: String
+  },
+    userId:{
+      type: String
+  },
+    type:{
+      type: String
+  },
+    datetyme:{
+      type: datetyme
+  },
+    data:{
+      type: String
+  },
   },
   {
     collection: 'data'
