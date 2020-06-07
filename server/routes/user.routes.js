@@ -32,7 +32,7 @@ userRoute.route('/read-user/:id').get((req, res) => {
     if (!user) {
       return res.status(404).json({ status: false , message: 'Usuario no encontrado.'});
     } else {
-      return res.status(200).json({status: true, user : _.pick(user,['email','address']) }); 
+      return res.status(200).json({status: true, user : _.pick(user,['email','address','userId']) }); 
     }
   })
 })
