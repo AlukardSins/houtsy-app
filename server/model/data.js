@@ -12,8 +12,8 @@ var Data = new Schema(
     type:{
       type: String
   },
-    datetyme:{
-      type: datetyme
+    datetime:{
+      type: date
   },
     data:{
       type: String

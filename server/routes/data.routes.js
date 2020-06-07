@@ -27,10 +27,11 @@ dataRoute.route('/').get((req, res) => {
 
 // Get single data
 dataRoute.route('/read-data/:id').get((req, res) => {
-  Data.findById(req.params.id, (error, data) => {
+  Data.findById(req.params.userId, (error, data) => {
     if (error) {
+      return res.status(404).json({ status: false , message: 'No se encuentran sensores'});
     } else {
-      res.json(data)
+      return res.status(200).json(data);
     }
   })
 })
