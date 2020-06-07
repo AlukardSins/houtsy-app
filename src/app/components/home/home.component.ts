@@ -8,7 +8,11 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public auth:AuthService) { }
+  anio:number;
+
+  constructor(public auth:AuthService) {
+    this.anio = new Date().getFullYear();
+   }
 
   ngOnInit(): void {
     this.auth.userProfile$.subscribe((perfil:any) => {
