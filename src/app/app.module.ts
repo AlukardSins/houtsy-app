@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { DataComponent } from './components/data/data.component';
-import { AuthComponent } from './components/auth/auth.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     DataComponent,
-    AuthComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
