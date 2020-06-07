@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 var Data = new Schema(
   {
+<<<<<<< HEAD
     serviceId:{
       type: String
   },
@@ -18,6 +19,28 @@ var Data = new Schema(
     data:{
       type: String
   },
+=======
+    serviceId: {
+      type: String,
+      required: true
+    },
+    userId: {
+      type: String,
+      required: true
+    },
+    type: {
+      type: String,
+      required: true
+    },
+    dateTime: {
+      type: Date,
+      required: true
+    },
+    data: {
+      type: String,
+      required: true
+    }
+>>>>>>> 5e79c0417145f7b2cb6fcc21d3a94d0ff80a95e5
   },
   {
     collection: 'data'
