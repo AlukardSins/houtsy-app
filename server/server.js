@@ -10,7 +10,8 @@ mongoose.Promise = global.Promise
 mongoose
   .connect(dbConfig.db, {
     useNewUrlParser: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useUnifiedTopology: true
   })
   .then(
     () => {
