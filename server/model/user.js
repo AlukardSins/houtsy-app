@@ -6,26 +6,23 @@ var User = new Schema(
     userId:{
       type: String
   },
-  idUsuario:{
-    type: String
+    userType:{
+      type: String
   },
-  userType:{
-    type: String
+    idType:{
+      type: String
   },
-  idType:{
-    type: String
+    idNumber:{
+     type: String
   },
-  idNumber:{
-    type: String
+    address:{
+     type: String
   },
-  address:{
-    type: String
+    email:{
+     type: String
   },
-  email:{
-    type: String
-  },
-  phoneNumber:{
-    type: String
+    phoneNumber:{
+     type: String
   },
   },
   {

@@ -8,9 +8,10 @@ const User = require('../model/user')
 // Add User
 userRoute.route('/add-user').post((req, res, next) => {
   User.create(req.body, (error, data) => {
-    if (error) {
+    if (!user) {
+      return res.status(404).json({ status: false , message: 'Usuario no encontrado.'});
     } else {
-      res.json(data)
+      return res.status(200).json({status: true, user : _.pick(user,['email','address']) }); 
     }
   })
 })
@@ -27,7 +28,7 @@ userRoute.route('/').get((req, res) => {
 
 // Get single user
 userRoute.route('/read-user/:id').get((req, res) => {
-  User.findById(req.params.id, (error, data) => {
+  User.findByEmail(req.params.email, (error, user) => {
     if (error) {
     } else {
       res.json(data)
