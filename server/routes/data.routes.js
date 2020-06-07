@@ -6,11 +6,12 @@ const dataRoute = express.Router()
 const Data = require('../model/data')
 
 // Add Data
-dataRoute.route('/add-data').post((req, res, next) => {
+dataRoute.route('/add-sensor-data').post((req, res) => {
   Data.create(req.body, (error, data) => {
     if (error) {
+      return res.status(500).json({ message: 'Error de envio', error: error })
     } else {
-      res.json(data)
+      return res.status(201).json({ message: 'Datos añadidos correctamente', data: data })
     }
   })
 })
@@ -19,48 +20,35 @@ dataRoute.route('/add-data').post((req, res, next) => {
 dataRoute.route('/').get((req, res) => {
   Data.find((error, data) => {
     if (error) {
+      return res.status(500).json({ message: 'Error de envio', error: error })
+    } else if (!data) {
+      return res.status(404).json({ message: 'No hay datos para mostrar', error: error })
     } else {
-      res.json(data)
+      return res.status(200).json({ message: 'Datos obtenidos', data: data })
     }
   })
 })
 
 // Get single data
-dataRoute.route('/read-data/:id').get((req, res) => {
+dataRoute.route('/get-sensor-data/:id').get((req, res) => {
   Data.findById(req.params.userId, (error, data) => {
     if (error) {
-      return res.status(404).json({ status: false , message: 'No se encuentran sensores'});
+      return res.status(500).json({ message: 'Error de envio', error: error })
+    } else if (!data) {
+      return res.status(404).json({ message: 'No hay datos para mostrar', error: error })
     } else {
-      return res.status(200).json(data);
+      return res.status(200).json({ message: 'Datos obtenidos', data: data })
     }
   })
 })
 
-// Update data
-dataRoute.route('/update-data/:id').put((req, res, next) => {
-  Data.findByIdAndUpdate(
-    req.params.id,
-    {
-      $set: req.body
-    },
-    (error, data) => {
-      if (error) {
-      } else {
-        res.json(data)
-        console.log('Data successfully updated!')
-      }
-    }
-  )
-})
-
 // Delete data
-dataRoute.route('/delete-data/:id').delete((req, res, next) => {
+dataRoute.route('/delete-sensor-data/:id').delete((req, res) => {
   Data.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
+      return res.status(500).json({ message: 'Error de envio', error: error })
     } else {
-      res.status(200).json({
-        msg: data
-      })
+      return res.status(200).json({ message: 'Datos eliminados correctamente', data: data })
     }
   })
 })
