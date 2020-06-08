@@ -10,6 +10,12 @@ import { FooterComponent } from './components/home/footer/footer.component';
 import { BodyComponent } from './components/home/body/body.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
+
+
+//auth
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -25,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard, BodyComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

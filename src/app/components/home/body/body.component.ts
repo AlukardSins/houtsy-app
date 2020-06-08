@@ -8,6 +8,7 @@ import { UserService} from '../../../services/user.service';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
+  logged = false;
 
   constructor(public auth: AuthService, private userService: UserService) { }
 
@@ -17,8 +18,9 @@ export class BodyComponent implements OnInit {
       if(perfil){this.userService.login(perfil.email).subscribe(
         res => {
          
+          this.logged = this.auth.loggedIn;
           
-          console.log(perfil);
+          console.log(perfil, this.auth.loggedIn);
         }
       );}
       /**/

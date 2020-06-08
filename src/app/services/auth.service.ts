@@ -70,8 +70,9 @@ export class AuthService {
     );
     checkAuth$.subscribe();
   }
+  
 
-  login(redirectPath: string = '/') {
+  login(redirectPath: string = '/users') {
     // A desired redirect path can be passed to login method
     // (e.g., from a route guard)
     // Ensure Auth0 client instance exists
