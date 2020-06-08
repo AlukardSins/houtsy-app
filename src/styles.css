@@ -53,5 +53,21 @@ body{
 }
 
 .padding{
-  padding-top: 5%;
+  padding-top: 1.5%;
+}
+
+
+
+.img-circle {
+    border-radius: 100%;
+    width: 100px;
+} 
+
+.img-thumb {
+  width: 50px;
+  height: 50px;
+}
+.img-tumb2{
+  width: 1px;
+  height: 2px;
 }

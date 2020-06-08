@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-body',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
+    this.auth.userProfile$.subscribe((perfil:any) => {
+      console.log(perfil);
+    });
   }
 
 }

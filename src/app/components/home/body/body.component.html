@@ -1,40 +1,98 @@
 <div class="container">
     <h1 class="text-center mt-5">HOUTSY</h1>
     <h2 class="text-center">Home Utility System</h2>
-    <div class="card-group mt-5">
-        <div class="card bg-dark">
-          <div class="card-body">
-            <h5 class="card-title text-center">Misión</h5>
-            <p class="card-text text-center">
-                *Inserte aquí mision*
-            </p>
-          </div>
-        </div>
-        <div class="card bg-dark">
-          <div class="card-body">
-            <h5 class="card-title text-center">Visión</h5>
-            <p class="card-text text-center">
-                *Inserte aquí visión*
-            </p>
-          </div>
-        </div>
-        <div class="card bg-dark">
-          <div class="card-body">
-            <h5 class="card-title text-center">Objetivos</h5>
-            <p class="card-text text-center">
-                *Inserte aquí los objetivos*
-            </p>
-          </div>
-        </div>
-      </div>
+</div>
+<div class="container mt-5">
+  <div class="card bg-secondary text-center animated animate__fadeInDown fast">
+    <div class="card-body">* Inserte aqui descripcion de la empresa, Historia o algo asi *</div>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+      and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </div>  
 </div>
 
+<div class="container mt-5">
+  <div class="card-deck text-center">
+    <div class="card bg-secondary animated animate__fadeInLeft fast">
+      <h5 class="card-title card-header">Misión</h5>
+      <div class="card-body">
+        <p class="card-text">* Inserte aqui mision de la empresa *</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </div>
+    <div class="card bg-secondary animated animate__fadeInDown fast">
+      <h5 class="card-title card-header">Visión</h5>
+      <div class="card-body">
+        <p class="card-text">* Inserte aqui visión de la empresa *</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </div>
+    <div class="card bg-secondary animated animate__fadeInRight fast">
+      <h5 class="card-title card-header">Objetivos</h5>
+      <div class="card-body">
+        <p class="card-text">* Inserte aqui objetivos de la empresea *</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="container text-center padding">
+<div class="container text-center padding animated animate__fadeIn">
     <div class="col">
         <h3 class="text-center mt-10">Ingresar</h3>
-        <img src="../../../../assets/img/Logo.png" class="animated fadeIn" alt="">
+        <img src="../../../../assets/img/Logo.png" alt="">
     </div>
+    <div class="text-center mt-2">
+      <button class="btn btn-outline-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Ingresar</button>
+      <button class="btn btn-outline-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
+  </div>  
 </div>
 
+<div class="container mt-5 text-center mb-5">
+  <div class="card-deck">
+    <div class="card bg-secondary animated animate__fadeInLeft fast">
+      <img src="..." class="card-img-top card-header" alt="...">
+      <h5 class="card-title card-header">Daniel Alejandro Rodriguez Garcia</h5>
+        <div class="card-body">
+        <p class="card-text">* Inserte aqui reseña del personaje *</p>
+      </div>
+    </div>
+    <div class="card bg-secondary animated animate__fadeInUp fast">
+      <img src="../../../../assets/img/Jesus Daniel.jpg" class="img-circle mt-2 mb-2" alt="...">
+      <h5 class="card-title card-header">Jesús Daniel Roldán Laverde</h5>
+      <div class="card-body">
+        <p class="card-text">
+          Co-fundador de HOUTSY y estudiante de octavo nivel de Ingeniería de Sistemas de la Universidad de Antioquia,
+          con un interés particular en el desarrollo de software, concretamente en el área de programación.
+          Quizá no le de la vuelta al mundo como siempre ha soñado, pero al menos aspira a que su código lo haga. 
+        </p>
+      </div>
+    </div>
+    <div class="card bg-secondary animated animate__fadeInRight">
+      <img src="" class="card-img-top card-header" alt="...">
+      <h5 class="card-title card-header">Juan David Zuluaga Ruiz</h5>
+      <div class="card-body">
+        <p class="card-text">* Inserte aqui reseña del personaje *</p>
+      </div>
+    </div>
+  </div>
+</div>
 
