@@ -13,33 +13,12 @@ import { catchError, map } from 'rxjs/operators';
 
 export class UserService {
 
-  selectedUser: User = {
-    userType: '',
-    idType: '',
-    idNumber: '',
-    address: '',
-    aptId: '',
-    email: '',
-    phoneNumber: ''
-    
-  };
-
-  headers = new HttpHeaders().set('Content-Type', 'application/json');
-  serverErrorMessages: string;
-
 
   constructor(private http: HttpClient) { }
 
-  login(email): Observable<any> {
-    let actaulUrl = `http://localhost:8000/api/get-user/${email}`;
-    return this.http.get(actaulUrl, { headers: this.headers })
-      .pipe(        
-       
-        map((res: Response) => {
-                   
-          return res || {}
-        })
-      )
-   
+  login(email) {
+    let actaulUrl = `http://localhost:8000/api/user/verify-user`;
+    return this.http.post(actaulUrl, email);
+
   }
-}
+      }
