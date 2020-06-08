@@ -31,10 +31,10 @@ userRoute.route('/').get((req, res) => {
 
 // Get single user
 userRoute.route('/get-user/:id').get((req, res) => {
-  User.findByEmail(req.params.email, (error, user) => {
+  User.findById(req.params.id, (error, user) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra el usuario', error: error })
-    } else if (!user) {
+    } else if (user.length === 0) {
       return res.status(204).json({ message: 'No hay usuario para mostrar', error: error })
     } else {
       return res.status(200).json({ message: 'Datos obtenidos', data: user })
@@ -42,8 +42,27 @@ userRoute.route('/get-user/:id').get((req, res) => {
   })
 })
 
+// Get verification of an existing user
+userRoute.route('/verify-user').post((req, res) => {
+  User.find({ email: req.body.email }, (error, user) => {
+    if (error) {
+      return res.status(500).json({ message: 'No se encuentra el usuario', data: { verified: false }, error: error })
+    } else if (user.length === 0) {
+      return res.status(204).json({ message: 'El usuario no esta registrado', data: { verified: false }, error: error })
+    } else {
+      return res.status(200).json({
+        message: 'Usuario verificado',
+        data: {
+          verified: true,
+          user: user
+        }
+      })
+    }
+  })
+})
+
 // Update user
-userRoute.route('/update-user/:id').put((req, res, next) => {
+userRoute.route('/update-user/:id').put((req, res) => {
   User.findByIdAndUpdate(req.params.id, { $set: req.body }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })
@@ -54,7 +73,7 @@ userRoute.route('/update-user/:id').put((req, res, next) => {
 })
 
 // Delete user
-userRoute.route('/delete-user/:id').delete((req, res, next) => {
+userRoute.route('/delete-user/:id').delete((req, res) => {
   User.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })

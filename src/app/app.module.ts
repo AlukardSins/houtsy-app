@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/home/footer/footer.component';
 import { BodyComponent } from './components/home/body/body.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,7 @@ import { BodyComponent } from './components/home/body/body.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

@@ -21,7 +21,7 @@ dataRoute.route('/').get((req, res) => {
   Data.find((error, data) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })
-    } else if (!data) {
+    } else if (data.length === 0) {
       return res.status(404).json({ message: 'No hay datos para mostrar', error: error })
     } else {
       return res.status(200).json({ message: 'Datos obtenidos', data: data })
@@ -34,7 +34,7 @@ dataRoute.route('/get-sensor-data/:id').get((req, res) => {
   Data.findById(req.params.userId, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })
-    } else if (!data) {
+    } else if (data.length === 0) {
       return res.status(404).json({ message: 'No hay datos para mostrar', error: error })
     } else {
       return res.status(200).json({ message: 'Datos obtenidos', data: data })
