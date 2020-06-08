@@ -1,19 +1,20 @@
 <div class="container">
-    <h1 class="text-center mt-5">HOUTSY</h1>
-    <h2 class="text-center">Home Utility System</h2>
+  <img src="../../../../assets/img/Logo.png" alt="">
+  <h1 class="text-center mt-5">HOUTSY</h1>
+  <h2 class="text-center">Home Utility System</h2>
 </div>
 <div class="container mt-5">
   <div class="card bg-secondary text-center animated animate__fadeInDown fast">
-    <div class="card-body">* Inserte aqui descripcion de la empresa, Historia o algo asi *</div>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-      and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <div class="card-body">Quienes somos</div>
+    <p class="card-text">
+      Somos un grupo de 3 estudiantes de Ingeniería de Sistemas de la Universidad de Antioquia, los cuales se han
+      interesado en un aspecto
+      particular de la vida cotidiana, y las formas en las que la tecnologia puede ayudar a facilitar algunos procesos
+      tediosos, o dar acceso
+      a los poco comunes, para permitirnos un mayor conocimiento de lo que sucede en nuestros hogares cuando no estamos
+      pendientes de ellos.
     </p>
-  </div>  
+  </div>
 </div>
 
 <div class="container mt-5">
@@ -21,49 +22,48 @@
     <div class="card bg-secondary animated animate__fadeInLeft fast">
       <h5 class="card-title card-header">Misión</h5>
       <div class="card-body">
-        <p class="card-text">* Inserte aqui mision de la empresa *</p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <p class="card-text">
+          Tener una sociedad acertiva de las tecnologias IoT, para que estas entiendan y aprovechen los beneficios que
+          estas tecnologias
+          ofrecen a los hogares.
+          Que comprendan los efectos de las mismas en la vida diaria y las facilidades que nos proveen ademas de la
+          seguridad que estas brindan.
         </p>
       </div>
     </div>
     <div class="card bg-secondary animated animate__fadeInDown fast">
       <h5 class="card-title card-header">Visión</h5>
       <div class="card-body">
-        <p class="card-text">* Inserte aqui visión de la empresa *</p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <p class="card-text">
+          Esperamos que de hoy dia a unos años mas adelante los hogares comiencen a ser inteligentes, comenzando con
+          darle
+          control e informacion a nuestros usuarios sobre los servicios publicos de sus hogares, para que esta
+          tecnologia se
+          empiece a adaptar en nuestra sociedad y por lo tanto sea mas aceptada a medida que avance.
         </p>
       </div>
     </div>
     <div class="card bg-secondary animated animate__fadeInRight fast">
-      <h5 class="card-title card-header">Objetivos</h5>
+      <h5 class="card-title card-header">Objetivo</h5>
       <div class="card-body">
-        <p class="card-text">* Inserte aqui objetivos de la empresea *</p>
+        <p class="card-text">
+          Nuestro objetivo es hacer que la sociedad se adapte a los hogares inteligentes que se iran desarrolando,
+          comenzando por conocer y experimentar con lo que estas tecnologias proveen para nuestra vida diaria.
+        </p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container text-center padding animated animate__fadeIn">
-    <div class="col">
-        <h3 class="text-center mt-10">Ingresar</h3>
-        <img src="../../../../assets/img/Logo.png" alt="">
-    </div>
-    <div class="text-center mt-2">
-      <button class="btn btn-outline-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Ingresar</button>
-      <button class="btn btn-outline-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
-  </div>  
+  <div class="col">
+    <h3 class="text-center mt-10" *ngIf="!auth.loggedIn">Controla tus servicios</h3>
+    <h3 class="text-center mt-10" *ngIf="auth.loggedIn">Recuerda que siempre puedes regresar</h3>
+  </div>
+  <div class="text-center mt-2">
+    <button class="btn btn-outline-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Ingresar</button>
+    <button class="btn btn-outline-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
+  </div>
 </div>
 
 <div class="container mt-5 text-center mb-5">
@@ -71,8 +71,14 @@
     <div class="card bg-secondary animated animate__fadeInLeft fast">
       <img src="..." class="card-img-top card-header" alt="...">
       <h5 class="card-title card-header">Daniel Alejandro Rodriguez Garcia</h5>
-        <div class="card-body">
-        <p class="card-text">* Inserte aqui reseña del personaje *</p>
+      <div class="card-body">
+        <p class="card-text">
+          Co-fundador de HOUTSY y estudiante de noveno nivel de Ingeniería de Sistemas de la Universidad de Antioquia,
+          enfocado en el desarrollo de aplicaciones web y con un interes peculiar en los dispositivos IoT y lo que rodea
+          esta nueva tecnologia.
+          Aspira llegar al punto de no tener que trabajar para vivir tranquilo, mas no dejar de trabajar en lo que le
+          apasiona.
+        </p>
       </div>
     </div>
     <div class="card bg-secondary animated animate__fadeInUp fast">
@@ -82,7 +88,7 @@
         <p class="card-text">
           Co-fundador de HOUTSY y estudiante de octavo nivel de Ingeniería de Sistemas de la Universidad de Antioquia,
           con un interés particular en el desarrollo de software, concretamente en el área de programación.
-          Quizá no le de la vuelta al mundo como siempre ha soñado, pero al menos aspira a que su código lo haga. 
+          Quizá no le de la vuelta al mundo como siempre ha soñado, pero al menos aspira a que su código lo haga.
         </p>
       </div>
     </div>
@@ -95,4 +101,3 @@
     </div>
   </div>
 </div>
-
