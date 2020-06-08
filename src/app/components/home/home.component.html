@@ -1,19 +1,6 @@
-<div>Hola mundo</div>
-
-
-
-<button class="btn btn-outline-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Ingresar</button>
-<button class="btn btn-outline-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
-
-
-
-<footer class="footer">
-    <div class="container">
-        <ul>
-            &copy;
-            <li>Daniel Alejandro Rodriguez</li>
-            <li>Jesus Daniel Roldan Laverde</li>
-            <li>Juan David Zuluaga Ruiz</li>
-        </ul>
-    </div>
-</footer>
+<app-body></app-body>
+<div class="text-center mt-2">
+    <button class="btn btn-outline-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Ingresar</button>
+    <button class="btn btn-outline-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
+</div>
+<app-footer></app-footer>
