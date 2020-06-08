@@ -40,6 +40,6 @@ export class UserService {
           return res || {}
         })
       )
-   // return this.http.get(URL + '/get-user', authCredentials);
+   
   }
 }
