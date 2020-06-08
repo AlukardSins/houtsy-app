@@ -3,10 +3,6 @@ const Schema = mongoose.Schema
 
 var User = new Schema(
   {
-    userId: {
-      type: String,
-      required: true
-    },
     userType: {
       type: String,
       required: true
@@ -22,6 +18,9 @@ var User = new Schema(
     address: {
       type: String,
       required: true
+    },
+    aptId: {
+      type: String
     },
     email: {
       type: String,

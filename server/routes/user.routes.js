@@ -21,7 +21,7 @@ userRoute.route('/').get((req, res) => {
   User.find((error, data) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })
-    } else if (!data) {
+    } else if (data.length === 0) {
       return res.status(204).json({ message: 'No hay usuarios para mostrar', error: error })
     } else {
       return res.status(200).json({ message: 'Usuarios obtenidos', data: data })
