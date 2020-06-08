@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import {User} from '../share/user.model'
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +24,22 @@ export class UserService {
     
   };
 
+  headers = new HttpHeaders().set('Content-Type', 'application/json');
+  serverErrorMessages: string;
+
+
   constructor(private http: HttpClient) { }
 
-  login(authCredentials){
-    return this.http.post(environment.URL + '/get-user', authCredentials);
+  login(email): Observable<any> {
+    let actaulUrl = `http://localhost:8000/api/get-user/${email}`;
+    return this.http.get(actaulUrl, { headers: this.headers })
+      .pipe(        
+       
+        map((res: Response) => {
+                   
+          return res || {}
+        })
+      )
+   // return this.http.get(URL + '/get-user', authCredentials);
   }
 }

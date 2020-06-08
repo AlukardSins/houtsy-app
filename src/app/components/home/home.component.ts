@@ -14,13 +14,15 @@ export class HomeComponent implements OnInit {
   constructor(public auth:AuthService, private userService: UserService) {
     this.anio = new Date().getFullYear();
    }
-  serverErrorMessages: string;
+  
 
   ngOnInit(): void {
     this.auth.userProfile$.subscribe((perfil:any) => {
       console.log(perfil);
       if(perfil){this.userService.login(perfil.email).subscribe(
         res => {
+          console.log(res);
+          
           console.log(perfil);
         }
       );}
