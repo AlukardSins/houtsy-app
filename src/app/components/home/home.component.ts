@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +9,11 @@ export class HomeComponent implements OnInit {
 
   anio:number;
 
-  constructor(public auth:AuthService) {
-    this.anio = new Date().getFullYear();
-   }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
-    this.auth.userProfile$.subscribe((perfil:any) => {
-      console.log(perfil);
-    });
   }
 
 }
