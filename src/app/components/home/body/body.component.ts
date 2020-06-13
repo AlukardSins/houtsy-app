@@ -16,15 +16,12 @@ export class BodyComponent implements OnInit {
   constructor (public auth: AuthService, private userService: UserService, private router: Router) {}
 
   ngOnInit (): void {
-    this.auth.userProfile$.subscribe((perfil: any) => {
-      if (perfil) {
-        this.userService.login(perfil.email).subscribe((res) => {
-          localStorage.setItem('id', perfil._id)
-          this.logged = this.auth.loggedIn
-          console.log(perfil, res)
-        })
-      }
-      /**/
-    })
+    
   }
+
+  userLogin(){
+    this.auth.login();
+  }
+
 }
+

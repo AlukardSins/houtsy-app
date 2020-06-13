@@ -71,7 +71,7 @@ export class AuthService {
     checkAuth$.subscribe()
   }
 
-  login (redirectPath: string = '/users') {
+  login (redirectPath: string = '/loading') {
     // A desired redirect path can be passed to login method
     // (e.g., from a route guard)
     // Ensure Auth0 client instance exists
@@ -83,7 +83,7 @@ export class AuthService {
       })
     })
   }
-
+  
   private handleAuthCallback () {
     // Call when app reloads after user logs in with Auth0
     const params = window.location.search

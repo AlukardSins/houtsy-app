@@ -1,8 +1,8 @@
 <div class="container mt-5">
   <div class="card bg-secondary text-center animated animate__fadeInDown fast">
-    <h5 class="card-header card-title">Quienes somos</h5>
+    <div class="card-header card-title">Quienes somos</div>
     <div class="card-body"></div>
-    <p class="card-text mb-5 mr-5 ml-5">
+    <p class="card-text">
       Somos un grupo de 3 estudiantes de Ingeniería de Sistemas de la Universidad de Antioquia, los cuales se han
       interesado en un aspecto
       particular de la vida cotidiana, y las formas en las que la tecnologia puede ayudar a facilitar algunos procesos
@@ -57,7 +57,7 @@
     <h3 class="text-center mt-10" *ngIf="auth.loggedIn">Recuerda que siempre puedes regresar</h3>
   </div>
   <div class="text-center mt-2">
-    <button class="btn btn-outline-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Ingresar</button>
+    <button class="btn btn-outline-primary" (click)="userLogin()" *ngIf="!auth.loggedIn">Ingresar</button>
     <button class="btn btn-outline-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
   </div>
 </div>

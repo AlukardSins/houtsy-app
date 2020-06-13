@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 //auth
 import { AuthGuard } from './auth/auth.guard';
 import { HeaderComponent } from './components/home/header/header.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HeaderComponent } from './components/home/header/header.component';
     HomeComponent,
     FooterComponent,
     BodyComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
