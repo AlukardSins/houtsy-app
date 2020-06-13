@@ -14,7 +14,7 @@ export class AuthGuard implements CanActivate {
     console.log('logged auth', this.body.logged, this.auth0.loggedIn)
 
     if (!this.auth0.loggedIn) {
-      this.router.navigateByUrl('/home')
+      this.router.navigateByUrl('/')
       return false
     }
     return true
