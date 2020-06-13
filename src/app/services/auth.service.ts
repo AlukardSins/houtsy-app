@@ -72,7 +72,7 @@ export class AuthService {
   }
   
 
-  login(redirectPath: string = '/users') {
+  login(redirectPath: string = '') {
     // A desired redirect path can be passed to login method
     // (e.g., from a route guard)
     // Ensure Auth0 client instance exists
