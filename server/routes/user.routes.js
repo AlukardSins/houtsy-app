@@ -22,7 +22,7 @@ userRoute.route('/').get((req, res) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })
     } else if (data.length === 0) {
-      return res.status(204).json({ message: 'No hay usuarios para mostrar', error: error })
+      return res.sendStatus(204)
     } else {
       return res.status(200).json({ message: 'Usuarios obtenidos', data: data })
     }
@@ -35,7 +35,7 @@ userRoute.route('/get-user/:id').get((req, res) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra el usuario', error: error })
     } else if (user.length === 0) {
-      return res.status(204).json({ message: 'No hay usuario para mostrar', error: error })
+      return res.sendStatus(204)
     } else {
       return res.status(200).json({ message: 'Datos obtenidos', data: user })
     }
@@ -48,7 +48,7 @@ userRoute.route('/verify-user').post((req, res) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra el usuario', data: { verified: false }, error: error })
     } else if (user.length === 0) {
-      return res.status(204).json({ message: 'El usuario no esta registrado', data: { verified: false }, error: error })
+      return res.sendStatus(204)
     } else {
       return res.status(200).json({
         message: 'Usuario verificado',

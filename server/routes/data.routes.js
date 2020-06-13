@@ -22,7 +22,7 @@ dataRoute.route('/').get((req, res) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })
     } else if (data.length === 0) {
-      return res.status(404).json({ message: 'No hay datos para mostrar', error: error })
+      return res.sendStatus(204)
     } else {
       return res.status(200).json({ message: 'Datos obtenidos', data: data })
     }
@@ -35,9 +35,24 @@ dataRoute.route('/get-sensor-data/:id').get((req, res) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })
     } else if (data.length === 0) {
-      return res.status(404).json({ message: 'No hay datos para mostrar', error: error })
+      return res.sendStatus(204)
     } else {
       return res.status(200).json({ message: 'Datos obtenidos', data: data })
+    }
+  })
+})
+
+// Get all data assigned to a user
+dataRoute.route('/data-user').post((req, res) => {
+  Data.find({ userId: req.body._id }, (error, data) => {
+    if (error) {
+      return res.status(500).json({ message: 'No se encuentra el usuario', data: { verified: false }, error: error })
+    } else if (data.length === 0) {
+      return res.sendStatus(204)
+    } else {
+      return res.status(200).json({
+        message: 'Datos de sensores registrados al usuario obtenidos'
+      })
     }
   })
 })
