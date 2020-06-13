@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 
 //auth
 import { AuthGuard } from './auth/auth.guard';
+import { HeaderComponent } from './components/home/header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AuthGuard } from './auth/auth.guard';
     DataComponent,
     HomeComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
