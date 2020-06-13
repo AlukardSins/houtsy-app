@@ -46,12 +46,31 @@ dataRoute.route('/get-sensor-data/:id').get((req, res) => {
 dataRoute.route('/data-user').post((req, res) => {
   Data.find({ userId: req.body._id }, (error, data) => {
     if (error) {
-      return res.status(500).json({ message: 'No se encuentra el usuario', data: { verified: false }, error: error })
+      return res
+        .status(500)
+        .json({ message: 'No se encuentra la informacion', data: { verified: false }, error: error })
     } else if (data.length === 0) {
       return res.sendStatus(204)
     } else {
       return res.status(200).json({
         message: 'Datos de sensores registrados al usuario obtenidos'
+      })
+    }
+  })
+})
+
+// Get all data assigned to a apt Id
+dataRoute.route('/data-apt').post((req, res) => {
+  Data.find({ aptId: req.body.aptId }, (error, data) => {
+    if (error) {
+      return res
+        .status(500)
+        .json({ message: 'No se encuentra la informacion', data: { verified: false }, error: error })
+    } else if (data.length === 0) {
+      return res.sendStatus(204)
+    } else {
+      return res.status(200).json({
+        message: 'Datos de sensores registrados al apartamento obtenidos'
       })
     }
   })

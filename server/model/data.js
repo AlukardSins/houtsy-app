@@ -3,13 +3,12 @@ const Schema = mongoose.Schema
 
 var Data = new Schema(
   {
-    serviceId: {
-      type: String,
-      required: true
-    },
     userId: {
       type: String,
       required: true
+    },
+    aptId: {
+      type: String
     },
     type: {
       type: String,
