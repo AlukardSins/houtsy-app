@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-body-user',
@@ -9,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class BodyUserComponent implements OnInit {
 
-  constructor(private dataService: DataService, private auth: AuthService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     let userId = localStorage.getItem('userToken');
@@ -19,14 +18,8 @@ export class BodyUserComponent implements OnInit {
     })
   }
 
-  logOut(): void{
-    localStorage.removeItem('userToken');
-    this.auth.logout();
-  }
-
   ngOnDestroy(): void{
 
   }
-
 
 }

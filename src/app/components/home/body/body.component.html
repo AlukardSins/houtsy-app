@@ -57,12 +57,13 @@
   <div class="col animated animate__fadeIn">
     <h3 class="text-center mt-10" *ngIf="!auth.loggedIn">Controla tus servicios</h3>
     <img src="../../../../assets/img/Logo.png" class="mt-3" alt="">
-    <h3 class="text-center mt-10" *ngIf="auth.loggedIn">Recuerda que siempre puedes regresar</h3>
+    <h3 class="text-center mt-3" *ngIf="auth.loggedIn">Recuerda que siempre puedes regresar</h3>
   </div>
   <div class="text-center mt-3 anamted animate__fadeIn">
     <button class="btn btn-primary" (click)="userLogin()" *ngIf="!auth.loggedIn">Ingresar</button>
-    <button class="btn btn-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
+    <button class="btn btn-primary" (click)="goToUsers()" *ngIf="auth.loggedIn">Mis servicios</button>
   </div>
+  <button class="btn btn-danger mt-3" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
 </div>
 
 <div class="container mt-5 text-center mb-5">

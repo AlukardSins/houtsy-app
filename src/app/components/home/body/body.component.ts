@@ -23,5 +23,9 @@ export class BodyComponent implements OnInit {
     this.auth.login();
   }
 
+  goToUsers(){
+    this.router.navigateByUrl('/users');
+  }
+
 }
 
