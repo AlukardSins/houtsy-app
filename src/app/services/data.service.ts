@@ -12,4 +12,15 @@ export class DataService {
     let actaulUrl = `http://localhost:8000/api/data/data-user`
     return this.http.post(actaulUrl, {userId: userId})
   }
+
+  closeService(sensorId): void{
+    let actaulUrl = `http://localhost:8000/api/data/something`
+    this.http.post(actaulUrl, sensorId)
+  }
+
+  openService(sensorId): void{
+    let actaulUrl = `http://localhost:8000/api/data/something`
+    this.http.post(actaulUrl, sensorId)
+  }
+
 }
