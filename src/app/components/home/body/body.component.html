@@ -1,8 +1,10 @@
-<div class="container mt-5">
-  <div class="card bg-secondary text-center animated animate__fadeInDown fast">
-    <div class="card-header card-title">Quienes somos</div>
+<div class="container mt-4">
+  <div class="card bg-secondary text-center animated animate__fadeInDown">
+    <div class="card-header card-title">
+      <h5>Quienes somos</h5>
+    </div>
     <div class="card-body"></div>
-    <p class="card-text">
+    <p class="card-text mb-5 ml-3 mr-3">
       Somos un grupo de 3 estudiantes de Ingeniería de Sistemas de la Universidad de Antioquia, los cuales se han
       interesado en un aspecto
       particular de la vida cotidiana, y las formas en las que la tecnologia puede ayudar a facilitar algunos procesos
@@ -15,7 +17,7 @@
 
 <div class="container mt-5">
   <div class="card-deck text-center">
-    <div class="card bg-secondary animated animate__fadeInLeft fast">
+    <div class="card bg-secondary animated animate__fadeInLeft">
       <h5 class="card-title card-header">Misión</h5>
       <div class="card-body">
         <p class="card-text">
@@ -27,7 +29,7 @@
         </p>
       </div>
     </div>
-    <div class="card bg-secondary animated animate__fadeInDown fast">
+    <div class="card bg-secondary animated animate__fadeInDown">
       <h5 class="card-title card-header">Visión</h5>
       <div class="card-body">
         <p class="card-text">
@@ -39,7 +41,7 @@
         </p>
       </div>
     </div>
-    <div class="card bg-secondary animated animate__fadeInRight fast">
+    <div class="card bg-secondary animated animate__fadeInRight">
       <h5 class="card-title card-header">Objetivo</h5>
       <div class="card-body">
         <p class="card-text">
@@ -51,13 +53,13 @@
   </div>
 </div>
 
-<div class="container text-center padding animated animate__fadeIn">
-  <div class="col">
+<div class="container text-center padding animated animate__zoomInDown">
+  <div class="col animated animate__fadeIn">
     <h3 class="text-center mt-10" *ngIf="!auth.loggedIn">Controla tus servicios</h3>
-    <img src="../../../../assets/img/Logo.png" alt="">
+    <img src="../../../../assets/img/Logo.png" class="mt-3" alt="">
     <h3 class="text-center mt-10" *ngIf="auth.loggedIn">Recuerda que siempre puedes regresar</h3>
   </div>
-  <div class="text-center mt-2">
+  <div class="text-center mt-3 anamted animate__fadeIn">
     <button class="btn btn-primary" (click)="userLogin()" *ngIf="!auth.loggedIn">Ingresar</button>
     <button class="btn btn-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">Salir</button>
   </div>
@@ -65,7 +67,7 @@
 
 <div class="container mt-5 text-center mb-5">
   <div class="card-deck">
-    <div class="card bg-secondary animated animate__fadeInLeft fast">
+    <div class="card bg-secondary animated animate__fadeInLeft">
       <img src="..." class="card-img-top card-header" alt="...">
       <h5 class="card-title card-header">Daniel Alejandro Rodriguez Garcia</h5>
       <div class="card-body">
@@ -78,7 +80,7 @@
         </p>
       </div>
     </div>
-    <div class="card bg-secondary animated animate__fadeInUp fast">
+    <div class="card bg-secondary animated animate__fadeInUp">
       <img src="../../../../assets/img/Jesus Daniel.jpg" class="img-circle mt-2 mb-2" alt="...">
       <h5 class="card-title card-header">Jesús Daniel Roldán Laverde</h5>
       <div class="card-body">

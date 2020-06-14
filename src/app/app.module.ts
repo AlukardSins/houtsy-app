@@ -7,10 +7,8 @@ import { UsersComponent } from './components/users/users.component';
 import { DataComponent } from './components/data/data.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/home/footer/footer.component';
-import { BodyComponent } from './components/home/body/body.component';
-
+import { BodyComponent } from './components/home/body/body.component';  
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 
 
 
@@ -18,6 +16,8 @@ import { RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { HeaderComponent } from './components/home/header/header.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { BodyUserComponent } from './components/users/body-user/body-user.component';
+import { LeftUserComponent } from './components/users/left-user/left-user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,9 @@ import { LoadingComponent } from './components/loading/loading.component';
     FooterComponent,
     BodyComponent,
     HeaderComponent,
-    LoadingComponent
+    LoadingComponent,
+    BodyUserComponent,
+    LeftUserComponent
   ],
   imports: [
     BrowserModule,
