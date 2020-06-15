@@ -16,39 +16,11 @@ dataRoute.route('/add-sensor-data').post((req, res) => {
   })
 })
 
-// Get all data
-dataRoute.route('/').get((req, res) => {
-  Data.find((error, data) => {
-    if (error) {
-      return res.status(500).json({ message: 'Error de envio', error: error })
-    } else if (data.length === 0) {
-      return res.sendStatus(204)
-    } else {
-      return res.status(200).json({ message: 'Datos obtenidos', data: data })
-    }
-  })
-})
-
-// Get single data
-dataRoute.route('/get-sensor-data/:id').get((req, res) => {
-  Data.findById(req.params.userId, (error, data) => {
-    if (error) {
-      return res.status(500).json({ message: 'Error de envio', error: error })
-    } else if (data.length === 0) {
-      return res.sendStatus(204)
-    } else {
-      return res.status(200).json({ message: 'Datos obtenidos', data: data })
-    }
-  })
-})
-
 // Get all data assigned to a user
 dataRoute.route('/data-user').post((req, res) => {
   Data.find({ userId: req.body._id }, (error, data) => {
     if (error) {
-      return res
-        .status(500)
-        .json({ message: 'No se encuentra la informacion', data: { verified: false }, error: error })
+      return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
     } else if (data.length === 0) {
       return res.sendStatus(204)
     } else {
@@ -63,15 +35,55 @@ dataRoute.route('/data-user').post((req, res) => {
 dataRoute.route('/data-apt').post((req, res) => {
   Data.find({ aptId: req.body.aptId }, (error, data) => {
     if (error) {
-      return res
-        .status(500)
-        .json({ message: 'No se encuentra la informacion', data: { verified: false }, error: error })
+      return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
     } else if (data.length === 0) {
       return res.sendStatus(204)
     } else {
       return res.status(200).json({
         message: 'Datos de sensores registrados al apartamento obtenidos'
       })
+    }
+  })
+})
+
+// Send Open / Close command
+dataRoute.route('/sensor-open').post((req, res) => {
+  Data.findByIdAndUpdate({ _id: req.body._id }, { status: 1 }, (error, data) => {
+    if (error) {
+      return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
+    } else if (data.length === 0) {
+      return res.sendStatus(204)
+    } else {
+      return res.status(200).json({
+        message: 'Sensor activado'
+      })
+    }
+  })
+})
+
+dataRoute.route('/sensor-close').post((req, res) => {
+  Data.findByIdAndUpdate({ _id: req.body._id }, { status: 0 }, (error, data) => {
+    if (error) {
+      return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
+    } else if (data.length === 0) {
+      return res.sendStatus(204)
+    } else {
+      return res.status(200).json({
+        message: 'Sensor desactivado'
+      })
+    }
+  })
+})
+
+// Get Sensor status
+dataRoute.route('/sensor-status').get((req, res) => {
+  Data.findById(req.body._id, (error, data) => {
+    if (error) {
+      return res.status(500).json({ message: 'Error de envio', error: error })
+    } else if (data.length === 0) {
+      return res.sendStatus(204)
+    } else {
+      return res.status(200).json({ message: 'Estado del sensor', status: data.status })
     }
   })
 })
