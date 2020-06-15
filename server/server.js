@@ -4,6 +4,9 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const dbConfig = require('./db/config')
+const rabbitURL = 'http://http://localhost:15672'
+
+var amqp = require('amqplib/callback_api')
 
 // Connecting mongoDB
 mongoose.Promise = global.Promise
@@ -68,4 +71,18 @@ app.use(function (err, req, res) {
   console.error(err.message)
   if (!err.statusCode) err.statusCode = 500
   res.status(err.statusCode).send(err.message)
+})
+
+amqp.connect(rabbitURL, function (err, conn) {
+  conn.createChannel(function (err, ch) {
+    ch.consume('sensor-data', function (data) {
+      console.log('.....')
+      setTimeout(function(){
+        //aqui hay que dividir el string data y llevarlo a la db
+  
+        console.log("Message:", data.content.toString())
+      },4000);
+      },{ noAck: true }
+    )
+  })
 })

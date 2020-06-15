@@ -1,6 +1,9 @@
+import {publishToQueue} from '../broker/MQService'
+
 const express = require('express')
 const app = express()
 const dataRoute = express.Router()
+
 
 // Import Data model
 const Data = require('../model/data')
@@ -61,6 +64,7 @@ dataRoute.route('/sensor-status').get((req, res) => {
 
 // Send Open / Close command
 dataRoute.route('/sensor-open').post((req, res) => {
+  await publishToQueue({ _id: req.body._id }, "abrir");
   Data.findByIdAndUpdate({ _id: req.body._id }, { status: true }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
@@ -75,6 +79,7 @@ dataRoute.route('/sensor-open').post((req, res) => {
 })
 
 dataRoute.route('/sensor-close').post((req, res) => {
+  await publishToQueue({ _id: req.body._id }, "cerrar");
   Data.findByIdAndUpdate({ _id: req.body._id }, { status: false }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
