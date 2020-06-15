@@ -21,6 +21,10 @@ var Data = new Schema(
     data: {
       type: String,
       required: true
+    },
+    status: {
+      type: Boolean,
+      required: true
     }
   },
   {
