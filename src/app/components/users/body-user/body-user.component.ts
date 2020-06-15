@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import { timer, Observable, Subject } from 'rxjs';
-import { interval, Subscription } from 'rxjs';
+import { interval, Subscription, Observable } from 'rxjs';
+
+//Chart
+import { ChartDataSets, ChartOptions } from 'chart.js';
+import { Color, Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-body-user',
@@ -14,6 +17,8 @@ export class BodyUserComponent implements OnInit {
   subscription: Subscription;
 
   constructor(private dataService: DataService) { }
+
+  grafica = true;
 
   ngOnInit(): void {
 
@@ -32,6 +37,60 @@ export class BodyUserComponent implements OnInit {
   ngOnDestroy(): void{
 
 
+  }
+
+
+  //chart
+  lineChartData: ChartDataSets[] = [
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Agua' },
+    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Energia' },
+    { data: [1,2,3,4,5,6,100], label: 'Gas' }
+  ];
+
+  //Labels shown on the x-axis
+  lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+  // Define chart options
+  lineChartOptions: ChartOptions = {
+    responsive: true
+  };
+
+  // Define colors of chart segments
+  lineChartColors: Color[] = [
+
+    //Fisrt chart - Agua
+    {
+      backgroundColor: 'rgba(34, 49, 63, 1)',
+      borderColor: 'rgba(37, 116, 169, 1)',
+    },
+    //Second chart - Energy
+    {
+      backgroundColor: 'rgba(255,0,0,0.3)',
+      borderColor: 'red',
+    },
+    //Third chart - Gas
+    { 
+      backgroundColor: 'rgba(38, 166, 91, 1)',
+      borderColor: 'rgba(0, 230, 64, 1)',
+    },
+
+  ];
+
+  // Set true to show legends
+  lineChartLegend = true;
+
+  // Define type of chart
+  lineChartType = 'line';
+
+  lineChartPlugins = [];
+
+  // events
+  chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
+    console.log(event, active);
+  }
+
+  chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
+    console.log(event, active);
   }
 
 }

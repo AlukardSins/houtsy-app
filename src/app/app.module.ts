@@ -12,12 +12,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
-//auth
+// auth
 import { AuthGuard } from './auth/auth.guard';
 import { HeaderComponent } from './components/home/header/header.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { BodyUserComponent } from './components/users/body-user/body-user.component';
 import { LeftUserComponent } from './components/users/left-user/left-user.component';
+
+
+// chart
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,8 @@ import { LeftUserComponent } from './components/users/left-user/left-user.compon
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [AuthGuard, BodyComponent],
   bootstrap: [AppComponent]
