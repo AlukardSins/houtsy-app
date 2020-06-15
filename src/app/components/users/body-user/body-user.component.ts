@@ -22,7 +22,7 @@ export class BodyUserComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const source = interval(10000);
+    const source = interval(60000);
     const text = 'Your Text Here';
     this.subscription = source.subscribe(val => console.log("datos", this.data)
     );
