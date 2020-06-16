@@ -11,7 +11,7 @@ export class DataService {
 
   getData(userId){
     let actaulUrl = `http://localhost:8000/api/data/data-user`
-    return this.http.post(actaulUrl, {userId: userId})
+    return this.http.post(actaulUrl, {userId: userId});
   }
 
   getStatus(_id): Observable<any>{
@@ -21,12 +21,12 @@ export class DataService {
 
   closeService(_id): void{
     let actaulUrl = `http://localhost:8000/api/data/sensor-open`
-    this.http.post(actaulUrl, {_id})
+    this.http.post(actaulUrl, {_id});
   }
 
   openService(_id): void{
     let actaulUrl = `http://localhost:8000/api/data/sensor-close`
-    this.http.post(actaulUrl, {_id})
+    this.http.post(actaulUrl, {_id});
   }
 
 }

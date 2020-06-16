@@ -23,26 +23,26 @@
         <!--  Datos del usuario<img src="..." class="card-img-top" alt="..."> -->
         <hr>    
         <div class="card-body">
-            <button class="btn btn-dark" *ngIf="agua === true" (click)="cerrarAgua()">Abrir</button>
-            <button class="btn btn-dark" *ngIf="agua === false" (click)="abrirAgua()">Cerrar</button>
+            <button class="btn btn-light" *ngIf="agua === true" (click)="cerrarAgua()">Abrir</button>
+            <button class="btn btn-light" *ngIf="agua === false" (click)="abrirAgua()">Cerrar</button>
         </div>
     </div>
-    <div class="card text-white bg-warning mb-3 ml-3">
+    <div class="card text-white bg-danger mb-3 ml-3">
         <h5 class="card-title card-header">Energia</h5>
         <!-- <img src="..." class="card-img-top" alt="..."> -->
         <hr>
         <div class="card-body">
-            <button class="btn btn-dark" *ngIf="energia === true" (click)="cerrarEnergia()">Abrir</button>
-            <button class="btn btn-dark" *ngIf="energia === false" (click)="abrirEnergia()">Cerrar</button>
+            <button class="btn btn-light" *ngIf="energia === true" (click)="cerrarEnergia()">Abrir</button>
+            <button class="btn btn-light" *ngIf="energia === false" (click)="abrirEnergia()">Cerrar</button>
         </div>
     </div>
     <div class="card text-white bg-success mb-3 ml-3">
         <h5 class="card-title card-header">Gas</h5>
         <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <hr>
+        <hr>    
         <div class="card-body">
-            <button class="btn btn-dark" *ngIf="gas === true" (click)="cerrarGas()">Abrir</button>
-            <button class="btn btn-dark" *ngIf="gas === false" (click)="abrirGas()">Cerrar</button>
+            <button class="btn btn-light" *ngIf="gas === true" (click)="cerrarGas()">Abrir</button>
+            <button class="btn btn-light" *ngIf="gas === false" (click)="abrirGas()">Cerrar</button>
         </div>
     </div>
 </div>

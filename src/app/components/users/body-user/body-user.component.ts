@@ -70,7 +70,7 @@ export class BodyUserComponent implements OnInit {
   getAllDataSensors(){
     let userId = localStorage.getItem('userToken');
     this.dataService.getData(userId).subscribe((res: any) =>{
-      console.log("Datos", {res});
+      console.log("Datos", res);
     });
   }
 
