@@ -15,4 +15,9 @@ export class UserService {
     let actaulUrl = `http://localhost:8000/api/user/verify-user`
     return this.http.post(actaulUrl, { email: email })
   }
+
+  datosUsuario (id){
+    let actualUrl =`http://localhost:8000/api/user/get-user`
+    return this.http.post(actualUrl,{id: id})
+  }
 }
