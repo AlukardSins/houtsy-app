@@ -1,542 +1,62 @@
 [
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:00:00",
-    "data": 42.014,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:01:00",
-    "data": 43.0398,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:02:00",
-    "data": 46.8082,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:03:00",
-    "data": 16.4121,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:04:00",
-    "data": 5.545,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:05:00",
-    "data": 28.9209,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:06:00",
-    "data": 43.6476,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:07:00",
-    "data": 57.5527,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:08:00",
-    "data": 30.0169,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:09:00",
-    "data": 78.6981,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:10:00",
-    "data": 25.8146,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:11:00",
-    "data": 50.7775,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:12:00",
-    "data": 44.3552,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:13:00",
-    "data": 34.5401,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:14:00",
-    "data": 23.5539,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:15:00",
-    "data": 65.4331,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:16:00",
-    "data": 75.8574,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:17:00",
-    "data": 80.1539,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:18:00",
-    "data": 27.2882,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:19:00",
-    "data": 8.7066,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:20:00",
-    "data": 33.3676,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:21:00",
-    "data": 60.862,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:22:00",
-    "data": 76.9096,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:23:00",
-    "data": 60.7962,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:24:00",
-    "data": 78.7436,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:25:00",
-    "data": 13.9941,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:26:00",
-    "data": 80.089,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:27:00",
-    "data": 1.9582,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:28:00",
-    "data": 3.8754,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:29:00",
-    "data": 20.1457,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:30:00",
-    "data": 71.6511,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:31:00",
-    "data": 49.9314,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:32:00",
-    "data": 19.3976,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:33:00",
-    "data": 32.5546,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:34:00",
-    "data": 74.1759,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:35:00",
-    "data": 24.2297,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:36:00",
-    "data": 88.9858,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:37:00",
-    "data": 66.1533,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:38:00",
-    "data": 93.5406,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:39:00",
-    "data": 77.6356,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:40:00",
-    "data": 26.3837,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:41:00",
-    "data": 16.35,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:42:00",
-    "data": 27.8125,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:43:00",
-    "data": 95.7516,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:44:00",
-    "data": 46.203,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:45:00",
-    "data": 9.7135,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:46:00",
-    "data": 9.6706,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:47:00",
-    "data": 31.0661,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:48:00",
-    "data": 32.4075,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:49:00",
-    "data": 48.2174,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:50:00",
-    "data": 49.1978,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:51:00",
-    "data": 6.7375,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:52:00",
-    "data": 62.7537,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:53:00",
-    "data": 77.4487,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:54:00",
-    "data": 40.6751,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:55:00",
-    "data": 40.3496,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:56:00",
-    "data": 37.595,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:57:00",
-    "data": 64.0264,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:58:00",
-    "data": 33.152,
-    "status": true
-  },
-  {
-    "userId": "5edd6f1023651b46d83a03c1",
-    "sensorId": "W-TA-101",
-    "aptId": "TA-101",
-    "type": "Water",
-    "dateTime": "2020-06-15T22:59:00",
-    "data": 93.4562,
-    "status": true
-  }
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:00:00", "data": 48.888, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:01:00", "data": 49.4145, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:02:00", "data": 48.0773, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:03:00", "data": 48.9175, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:04:00", "data": 49.653, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:05:00", "data": 49.2089, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:06:00", "data": 47.3931, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:07:00", "data": 48.9633, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:08:00", "data": 48.9693, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:09:00", "data": 49.9899, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:10:00", "data": 51.2659, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:11:00", "data": 52.9609, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:12:00", "data": 53.2178, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:13:00", "data": 53.1583, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:14:00", "data": 51.3853, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:15:00", "data": 49.7828, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:16:00", "data": 48.6815, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:17:00", "data": 48.5824, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:18:00", "data": 48.7305, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:19:00", "data": 47.0808, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:20:00", "data": 48.4854, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:21:00", "data": 49.5882, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:22:00", "data": 51.4967, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:23:00", "data": 50.5365, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:24:00", "data": 51.5875, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:25:00", "data": 50.2679, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:26:00", "data": 49.3483, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:27:00", "data": 47.4245, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:28:00", "data": 45.8152, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:29:00", "data": 44.6869, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:30:00", "data": 43.8382, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:31:00", "data": 42.2099, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:32:00", "data": 42.4275, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:33:00", "data": 41.0035, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:34:00", "data": 42.2008, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:35:00", "data": 40.7859, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:36:00", "data": 40.6469, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:37:00", "data": 42.1649, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:38:00", "data": 43.6017, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:39:00", "data": 44.3975, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:40:00", "data": 44.9871, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:41:00", "data": 45.2185, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:42:00", "data": 44.8436, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:43:00", "data": 45.5434, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:44:00", "data": 44.5641, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:45:00", "data": 44.5828, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:46:00", "data": 46.348, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:47:00", "data": 46.6316, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:48:00", "data": 44.718, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:49:00", "data": 45.5314, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:50:00", "data": 47.3348, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:51:00", "data": 46.7131, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:52:00", "data": 47.6481, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:53:00", "data": 46.6531, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:54:00", "data": 48.474, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:55:00", "data": 48.1294, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:56:00", "data": 48.0982, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:57:00", "data": 47.3688, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:58:00", "data": 46.6609, "status": true},
+	{"userId": "5edd6f1023651b46d83a03c1", "sensorId": "W-A-101", "aptId": "TA-101", "type": "Water", "dateTime": "2020-02-02T02:59:00", "data": 47.6262, "status": true}
 ]
