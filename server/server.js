@@ -105,6 +105,8 @@ amqp.connect(rabbitURL, (err, conn) => {
               }
               datas = null;
             });
+            console.log("Hola mundo");
+            
             console.log('Message: ', datas)
           },
           { noAck: true }
