@@ -84,9 +84,29 @@ amqp.connect(rabbitURL, (err, conn) => {
         ch.consume(
           'sensor-data',
           (data) => {
-            data.content.toString().split()
-
-            console.log('Message: ', data.content.toString())
+            // Aqui hay que dividir el string data y llevarlo a la db
+            datos = data.content.toString().split(', ');
+            let datas = new dataModel();
+            datas.userId = datos[0];
+            datas.sensorId = datos[1];
+            datas.aptId = datos[2];
+            datas.type = datos[3];
+            datas.dateTime = Date(datos[4]);
+            datas.data = Number(datos[5]);
+            if(datos[6] === 'true'){
+              datas.status = true
+            }else{
+              datas.status = false
+            }
+            datas.save((error, doc)=>{
+              if(error){
+                console.log(error);
+              }
+              datas = null;
+            });
+            console.log("Hola mundo");
+            
+            console.log('Message: ', datas)
           },
           { noAck: true }
         )
