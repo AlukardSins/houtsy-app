@@ -11,9 +11,18 @@ export class LeftUserComponent implements OnInit {
 
   constructor(private auth: AuthService, private userService: UserService) { }
 
+  email = "";
+  direccion = "";
+  idNumber = "";
+
+
 
   ngOnInit(): void {
-    this.userService.datosUsuario(localStorage.getItem('userToken'))
+    this.userService.datosUsuario(localStorage.getItem('userToken')).subscribe((res:any)=>{
+      this.email = res.data.email;
+      this.direccion = res.data.address;
+      this.idNumber = res.data.idNumber;
+    });
   }
 
   logOut(): void{

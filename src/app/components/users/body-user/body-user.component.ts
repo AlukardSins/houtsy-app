@@ -28,7 +28,7 @@ export class BodyUserComponent implements OnInit {
   ngOnInit(): void {
     let userId = localStorage.getItem('userToken');
     this.dataService.getData(userId).subscribe((res: any) =>{
-      console.log({res}); 
+      console.log("asdfadafasdfasdfasfasfdasfadfadfafd", {res}); 
     });
     const source = interval(60000);
     const text = 'Your Text Here';
