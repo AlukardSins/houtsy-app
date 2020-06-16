@@ -7,6 +7,10 @@ var Data = new Schema(
       type: String,
       required: true
     },
+    sensorId: {
+      type: String,
+      required: true
+    },
     aptId: {
       type: String
     },

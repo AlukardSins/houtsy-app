@@ -77,19 +77,16 @@ amqp.connect(rabbitURL, (err, conn) => {
   if (err) {
     console.log(err.message)
   } else {
-    conn.createChannel((err, ch) => {
-      if (err) {
-        console.log(err.message)
+    conn.createChannel((error, ch) => {
+      if (error) {
+        console.log(error.message)
       } else {
         ch.consume(
           'sensor-data',
-          function (data) {
-            console.log('.....')
-            setTimeout(function () {
-              // Aqui hay que dividir el string data y llevarlo a la db
+          (data) => {
+            // Aqui hay que dividir el string data y llevarlo a la db
 
-              console.log('Message:', data.content.toString())
-            }, 4000)
+            console.log('Message: ', data.content.toString())
           },
           { noAck: true }
         )

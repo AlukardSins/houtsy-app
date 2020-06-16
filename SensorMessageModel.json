@@ -1,0 +1,9 @@
+{
+  "userId": "User Unique ID",
+  "sensorId": "Sensor Unique ID",
+  "aptId": "Apartment Unique ID" Optional,
+  "type": "Energy" | "Water" | "Gas",
+  "dateTime": "Format YYYY-MM-DDTHH:MM:SS",
+  "data": "Converted raw data to float with 4 decimal points",
+  "status": true | false
+}
