@@ -25,6 +25,7 @@ export class BodyUserComponent implements OnInit {
   datosAgua = [];
   datosEnergia = [];
   datosGas = [];
+  datos = [];
 
 
   ngOnInit(): void {
@@ -69,9 +70,32 @@ export class BodyUserComponent implements OnInit {
 
   getAllDataSensors(){
     let userId = localStorage.getItem('userToken');
+    let water = "Water";
+    let energy = "Energy";
+    let gas = "Gas";
+
     this.dataService.getData(userId).subscribe((res: any) =>{
-      console.log("Datos", res);
+      console.log({res});
+      
+      this.datos.push(res.data.filter(i => water.includes(i.type))); 
+      this.datos.push(res.data.filter(i => energy.includes(i.type))); 
+      this.datos.push(res.data.filter(i => gas.includes(i.type))); 
+      this.datosAgua.push(this.datos[0].data);
+      this.datosEnergia.push(this.datos[1].data);
+      this.datosGas.push(this.datos[2].data);
+
+      this.lineChartData[0].data.push(this.datosAgua)
+      this.lineChartData[1].data.push(this.datosEnergia);
+      this.lineChartData[2].data.push(this.datosGas);
+      console.log("Chart data: ", this.lineChartData[0]);
+      
     });
+    console.log(this.datos);
+    
+    console.log("Agua", this.datosAgua);
+    console.log("Energia", this.datosEnergia);
+    console.log("Gas", this.datosGas);
+    
   }
 
 
@@ -84,9 +108,9 @@ export class BodyUserComponent implements OnInit {
 
   //chart
   lineChartData: ChartDataSets[] = [
-    { data: [], label: 'Agua' },
-    { data: [], label: 'Energia' },
-    { data: [], label: 'Gas' }
+    { data: this.datosAgua, label: 'Agua' },
+    { data: this.datosEnergia, label: 'Energia' },
+    { data: this.datosGas, label: 'Gas' }
   ];
 
   //Labels shown on the x-axis
