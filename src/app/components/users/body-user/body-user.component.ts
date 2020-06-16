@@ -73,6 +73,7 @@ export class BodyUserComponent implements OnInit {
     let water = "Water";
     let energy = "Energy";
     let gas = "Gas";
+    let data = "data";
 
     this.dataService.getData(userId).subscribe((res: any) =>{
       console.log({res});
@@ -80,9 +81,11 @@ export class BodyUserComponent implements OnInit {
       this.datos.push(res.data.filter(i => water.includes(i.type))); 
       this.datos.push(res.data.filter(i => energy.includes(i.type))); 
       this.datos.push(res.data.filter(i => gas.includes(i.type))); 
-      this.datosAgua.push(this.datos[0].data);
-      this.datosEnergia.push(this.datos[1].data);
-      this.datosGas.push(this.datos[2].data);
+      for (let i = 0; i < this.datos[0].length; i++) {
+        console.log(this.datos[0].length);
+        
+        this.datosAgua.push(parseFloat(this.datos[0]));
+      }
 
       this.lineChartData[0].data.push(this.datosAgua)
       this.lineChartData[1].data.push(this.datosEnergia);
