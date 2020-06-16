@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+
 const dataRoute = express.Router()
 var amqp = require('amqplib/callback_api')
 const rabbitURL = 'amqp://zjvtghki:uIDw7fq4y-H8XbLrhcSAMDVNH5-K3llA@shark.rmq.cloudamqp.com/zjvtghki'
@@ -43,7 +44,8 @@ dataRoute.route('/data-apt').post((req, res) => {
       return res.sendStatus(204)
     } else {
       return res.status(200).json({
-        message: 'Datos de sensores registrados al apartamento obtenidos'
+        message: 'Datos de sensores registrados al apartamento obtenidos',
+        data: data
       })
     }
   })
