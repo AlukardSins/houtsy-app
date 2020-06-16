@@ -82,11 +82,12 @@ amqp.connect(rabbitURL, (err, conn) => {
         console.log(error.message)
       } else {
         ch.consume(
-          'sensor-data',
+          'mqtt-subscription-mosq-onGQPvgy4gVUvZz1PQqos0',
           (data) => {
             // Aqui hay que dividir el string data y llevarlo a la db
-
-            console.log('Message: ', data.content.toString())
+            datos = data.content.toString().split(',');
+            
+            console.log('Message: ', datos)
           },
           { noAck: true }
         )
