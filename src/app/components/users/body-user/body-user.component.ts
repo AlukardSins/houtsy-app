@@ -19,18 +19,57 @@ export class BodyUserComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   grafica = true;
+  gas = true;
+  energia = true;
+  agua = true;
+
+
 
   ngOnInit(): void {
-
+    let userId = localStorage.getItem('userToken');
+    this.dataService.getData(userId).subscribe((res: any) =>{
+      console.log({res}); 
+    });
     const source = interval(60000);
     const text = 'Your Text Here';
-    this.subscription = source.subscribe(val => console.log("datos", this.data)
-    );
-    /*let userId = localStorage.getItem('userToken');
-    this.dataService.getData(userId).subscribe((res: any) =>{
-      console.log({res});
-      
-    })*/
+    this.subscription = source.subscribe(val => {
+      let userId = localStorage.getItem('userToken');
+      this.dataService.getData(userId).subscribe((res: any) =>{
+        console.log({res}); 
+      })
+    });
+  }
+
+  //Abrir y cerrar agua
+  abrirAgua(){
+    this.agua = true;
+  }
+
+  cerrarAgua(){
+    this.agua = false;
+  }
+
+  //abrir y cerrar gas
+  abrirGas(){
+    this.gas = true;
+  }
+
+  cerrarGas(){
+    this.gas = false;
+  }
+
+  //abrir y cerrar energia
+  abrirEnergia(){
+    this.energia = true;
+  }
+
+  cerrarEnergia(){
+    this.energia = false;
+  }
+
+
+  getAllDataSensors(){
+
   }
 
 
@@ -38,6 +77,22 @@ export class BodyUserComponent implements OnInit {
 
 
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   //chart
