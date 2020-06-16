@@ -21,7 +21,8 @@
     <div class="card text-white bg-primary mb-3 ml-3">
         <h5 class="card-title card-header">Agua</h5>
         <!--  Datos del usuario<img src="..." class="card-img-top" alt="..."> -->
-        <hr>    
+        <h1 class="mt-4">$ {{ aguaAPesos }}</h1>
+        <hr>
         <div class="card-body">
             <button class="btn btn-light" *ngIf="agua === true" (click)="cerrarAgua()">Abrir</button>
             <button class="btn btn-light" *ngIf="agua === false" (click)="abrirAgua()">Cerrar</button>
@@ -30,7 +31,8 @@
     <div class="card text-white bg-danger mb-3 ml-3">
         <h5 class="card-title card-header">Energia</h5>
         <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <hr>
+        <h1 class="mt-4">$ {{ energiaAPesos }}</h1>
+        <hr> 
         <div class="card-body">
             <button class="btn btn-light" *ngIf="energia === true" (click)="cerrarEnergia()">Abrir</button>
             <button class="btn btn-light" *ngIf="energia === false" (click)="abrirEnergia()">Cerrar</button>
@@ -39,7 +41,8 @@
     <div class="card text-white bg-success mb-3 ml-3">
         <h5 class="card-title card-header">Gas</h5>
         <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <hr>    
+        <h1 class="mt-4">$ {{ gasAPesos }}</h1>  
+        <hr>
         <div class="card-body">
             <button class="btn btn-light" *ngIf="gas === true" (click)="cerrarGas()">Abrir</button>
             <button class="btn btn-light" *ngIf="gas === false" (click)="abrirGas()">Cerrar</button>
