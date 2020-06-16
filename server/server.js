@@ -5,6 +5,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const dbConfig = require('./db/config')
 const rabbitURL = 'amqp://zjvtghki:uIDw7fq4y-H8XbLrhcSAMDVNH5-K3llA@shark.rmq.cloudamqp.com/zjvtghki'
+const dataModel = require('./model/data')
 
 var amqp = require('amqplib/callback_api')
 
@@ -82,7 +83,7 @@ amqp.connect(rabbitURL, (err, conn) => {
         console.log(error.message)
       } else {
         ch.consume(
-          'sensor-data',
+          'mqtt-subscription-mosq-onGQPvgy4gVUvZz1PQqos0',
           (data) => {
             // Aqui hay que dividir el string data y llevarlo a la db
             datos = data.content.toString().split(', ');
@@ -104,8 +105,6 @@ amqp.connect(rabbitURL, (err, conn) => {
               }
               datas = null;
             });
-            console.log("Hola mundo");
-            
             console.log('Message: ', datas)
           },
           { noAck: true }

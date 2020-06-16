@@ -28,6 +28,9 @@ export class BodyUserComponent implements OnInit {
   datosEnergia = []
   datosGas = []
   datos = []
+  gasId = ""
+  energiaId = ""
+  aguaId = ""
 
   ngOnInit (): void {
     this.getAllDataSensors()
@@ -40,6 +43,8 @@ export class BodyUserComponent implements OnInit {
       })
     })
   }
+
+  
 
   //Abrir y cerrar agua
   abrirAgua () {
@@ -65,12 +70,12 @@ export class BodyUserComponent implements OnInit {
 
   //abrir y cerrar energia
   abrirEnergia () {
-    this.dataService.openService(this.datosEnergia[0]._id)
+    this.dataService.openService(this.energiaId)
     this.energia = true
   }
 
   cerrarEnergia () {
-    this.dataService.closeService(this.datosEnergia[0]._id)
+    this.dataService.closeService(this.energiaId)
     this.energia = false
   }
 
@@ -79,20 +84,25 @@ export class BodyUserComponent implements OnInit {
 
     this.dataService.getData(userId).subscribe((res: any) => {
       console.log({ res })
-
       res.data.map((dataSet) => {
+        console.log("dataSet", dataSet);
+        
         if (dataSet.type === 'Water') {
+          this.aguaId = dataSet.sensorId
           this.datosAgua.push(dataSet.data)
         } else if (dataSet.type === 'Energy') {
+          this.energiaId = dataSet.sensorId
+          console.log("idEnergia === ", this.energiaId);
           this.datosEnergia.push(dataSet.data)
         } else if (dataSet.type === 'Gas') {
+          this.gasId = dataSet.sensorId
           this.datosGas.push(dataSet.data)
         }
       })
       console.log('Chart data: ', this.lineChartData[0])
     })
     console.log(this.datos)
-
+    
     console.log('Agua', this.datosAgua)
     console.log('Energia', this.datosEnergia)
     console.log('Gas', this.datosGas)

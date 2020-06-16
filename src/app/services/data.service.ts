@@ -20,11 +20,14 @@ export class DataService {
   }
 
   closeService(_id): void{
+    console.log("\n\n\nCLOSEEEEE: ", _id, "\n\n\n\n\n");
+    
     let actaulUrl = `http://localhost:8000/api/data/sensor-open`
     this.http.post(actaulUrl, {_id});
   }
 
   openService(_id): void{
+    console.log("\n\n\nopenEEEEE: ", _id, "\n\n\n\n\n");  
     let actaulUrl = `http://localhost:8000/api/data/sensor-close`
     this.http.post(actaulUrl, {_id});
   }

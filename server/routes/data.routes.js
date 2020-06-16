@@ -66,27 +66,29 @@ dataRoute.route('/sensor-status').get((req, res) => {
 })
 
 // Send Open / Close command
-dataRoute.route('/sensor-open').post(async(req, res) => {
-  amqp.connect(rabbitURL, function(error0, connection) {
+dataRoute.route('/sensor-open').post((req, res) => {
+  console.log('Entre!!!!!!!!!!!!!!!!!');
   
-  if (error0) {
-    throw error0;
-  }
-  connection.createChannel(function(error1, channel) {
-    if (error1) {
-      throw error1;
-    }
+//   amqp.connect(rabbitURL, function(error0, connection) {
+  
+//   if (error0) {
+//     throw error0;
+//   }
+//   connection.createChannel(function(error1, channel) {
+//     if (error1) {
+//       throw error1;
+//     }
     
 
-    channel.assertQueue({ _id: req.body._id }, {
-      durable: false
-    });
+//     channel.assertQueue('cualquiecosa', {
+//       durable: false
+//     });
 
-    channel.sendToQueue({ _id: req.body._id }, "abrir");
-    console.log(" [x] Sent %s", "abrir");
-  });
-});
-  Data.findByIdAndUpdate({ _id: req.body._id }, { status: true }, (error, data) => {
+//     channel.sendToQueue('cualquiercosa', "abrir");
+//     console.log(" [x] Sent %s", "abrir");
+//   });
+// });
+  Data.findByIdAndUpdate({ sensorId: req.body._id }, { status: true }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
     } else if (data.length === 0) {
@@ -99,7 +101,7 @@ dataRoute.route('/sensor-open').post(async(req, res) => {
   })
 })
 
-dataRoute.route('/sensor-close').post(async(req, res) => {
+dataRoute.route('/sensor-close').post((req, res) => {
   amqp.connect(rabbitURL, function(error0, connection) {
     if (error0) {
       throw error0;
