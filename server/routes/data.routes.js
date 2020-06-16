@@ -20,7 +20,7 @@ dataRoute.route('/add-sensor-data').post((req, res) => {
 
 // Get all data assigned to a user
 dataRoute.route('/data-user').post((req, res) => {
-  Data.find({ userId: req.body.sensorId }, (error, data) => {
+  Data.find({ userId: req.body.userId }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
     } else if (data.length === 0) {
