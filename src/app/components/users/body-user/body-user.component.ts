@@ -96,9 +96,9 @@ export class BodyUserComponent implements OnInit {
 
   //chart
   lineChartData: ChartDataSets[] = [
-    { data: this.datosAgua, label: 'Agua metro cubico' },
-    { data: this.datosEnergia, label: 'Energia Kilovatio hora' },
-    { data: this.datosGas, label: 'Gas metro cubicos' }
+    { data: this.datosAgua, label: 'Agua M3/s'},
+    { data: this.datosEnergia, label: 'Energia kWh' },
+    { data: this.datosGas, label: 'Gas M3/s' }
   ]
 
   //Labels shown on the x-axis
