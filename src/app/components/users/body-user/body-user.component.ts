@@ -22,14 +22,13 @@ export class BodyUserComponent implements OnInit {
   gas = true;
   energia = true;
   agua = true;
-
+  datosAgua = [];
+  datosEnergia = [];
+  datosGas = [];
 
 
   ngOnInit(): void {
-    let userId = localStorage.getItem('userToken');
-    this.dataService.getData(userId).subscribe((res: any) =>{
-      console.log("asdfadafasdfasdfasfasfdasfadfadfafd", {res}); 
-    });
+    this.getAllDataSensors();
     const source = interval(60000);
     const text = 'Your Text Here';
     this.subscription = source.subscribe(val => {
@@ -69,7 +68,10 @@ export class BodyUserComponent implements OnInit {
 
 
   getAllDataSensors(){
-
+    let userId = localStorage.getItem('userToken');
+    this.dataService.getData(userId).subscribe((res: any) =>{
+      console.log("Datos", {res});
+    });
   }
 
 
@@ -80,31 +82,17 @@ export class BodyUserComponent implements OnInit {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   //chart
   lineChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Agua' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Energia' },
-    { data: [1,2,3,4,5,6,100], label: 'Gas' }
+    { data: [], label: 'Agua' },
+    { data: [], label: 'Energia' },
+    { data: [], label: 'Gas' }
   ];
 
   //Labels shown on the x-axis
-  lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
+  lineChartLabels: Label[] = ['0','1','2','3','4','5','6','7','8','9','9','10','11','12','13','14','15','16','17','18','19','20','21','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59'];
+  
+  
   // Define chart options
   lineChartOptions: ChartOptions = {
     responsive: true
