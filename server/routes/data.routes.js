@@ -22,6 +22,8 @@ dataRoute.route('/add-sensor-data').post((req, res) => {
 
 // Get all data assigned to a user
 dataRoute.route('/data-user').post((req, res) => {
+  console.log("data obtenida",{ userId: req.body.userId } );
+  
   Data.find({ userId: req.body.userId }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
@@ -106,6 +108,8 @@ dataRoute.route('/sensor-open').post((req, res) => {
 })
 
 dataRoute.route('/sensor-close').post((req, res) => {
+  console.log(cerrado);
+  
   amqp.connect(rabbitURL, function(error0, connection) {
     if (error0) {
       throw error0;

@@ -15,21 +15,21 @@ export class DataService {
   }
 
   getStatus(_id): Observable<any>{
-    let actaulUrl = `http://localhost:8000/api/data/sensor-status`
-    return this.http.get(actaulUrl, _id);
+    let statusUri = `http://localhost:8000/api/data/sensor-status`
+    return this.http.get(statusUri, _id);
   }
 
   closeService(_id): void{
     console.log("\n\n\nCLOSEEEEE: ", _id, "\n\n\n\n\n");
     
-    let actaulUrl = `http://localhost:8000/api/data/sensor-open`
-    this.http.post(actaulUrl, {_id});
+    let closeUri = `http://localhost:8000/api/data/sensor-close`
+    this.http.post(closeUri, {_id});
   }
 
   openService(_id): void{
     console.log("\n\n\nopenEEEEE: ", _id, "\n\n\n\n\n");  
-    let actaulUrl = `http://localhost:8000/api/data/sensor-close`
-    this.http.post(actaulUrl, {_id});
+    let openUri = `http://localhost:8000/api/data/sensor-open`
+    this.http.post(openUri, {_id});
   }
 
 }
