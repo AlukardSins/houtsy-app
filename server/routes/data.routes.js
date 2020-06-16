@@ -67,6 +67,10 @@ dataRoute.route('/sensor-status').get((req, res) => {
 
 // Send Open / Close command
 dataRoute.route('/sensor-open').post((req, res) => {
+
+  
+
+
   console.log('Entre!!!!!!!!!!!!!!!!!');
   
 //   amqp.connect(rabbitURL, function(error0, connection) {
