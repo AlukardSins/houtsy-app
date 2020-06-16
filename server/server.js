@@ -84,7 +84,7 @@ amqp.connect(rabbitURL, (err, conn) => {
         ch.consume(
           'sensor-data',
           (data) => {
-            // Aqui hay que dividir el string data y llevarlo a la db
+            data.content.toString().split()
 
             console.log('Message: ', data.content.toString())
           },

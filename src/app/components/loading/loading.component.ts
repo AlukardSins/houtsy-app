@@ -39,7 +39,6 @@ export class LoadingComponent implements OnInit {
           console.log("\n\n\n\n\n",{res},"\n\n\n");
           
           localStorage.setItem('userToken', res.data.user[0]._id);
-          localStorage.setItem('email',res.data.user[0].email);
           Swal.close();
           Swal.fire({
             allowOutsideClick: false,

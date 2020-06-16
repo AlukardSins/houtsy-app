@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+
 const dataRoute = express.Router()
 var amqp = require('amqplib/callback_api')
 const rabbitURL = 'amqp://zjvtghki:uIDw7fq4y-H8XbLrhcSAMDVNH5-K3llA@shark.rmq.cloudamqp.com/zjvtghki'
@@ -21,14 +22,15 @@ dataRoute.route('/add-sensor-data').post((req, res) => {
 
 // Get all data assigned to a user
 dataRoute.route('/data-user').post((req, res) => {
-  Data.find({ userId: req.body._id }, (error, data) => {
+  Data.find({ userId: req.body.userId }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
     } else if (data.length === 0) {
       return res.sendStatus(204)
     } else {
       return res.status(200).json({
-        message: 'Datos de sensores registrados al usuario obtenidos'
+        message: 'Datos de sensores registrados al usuario obtenidos',
+        data: data
       })
     }
   })
@@ -43,7 +45,8 @@ dataRoute.route('/data-apt').post((req, res) => {
       return res.sendStatus(204)
     } else {
       return res.status(200).json({
-        message: 'Datos de sensores registrados al apartamento obtenidos'
+        message: 'Datos de sensores registrados al apartamento obtenidos',
+        data: data
       })
     }
   })
