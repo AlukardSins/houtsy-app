@@ -1,0 +1,542 @@
+[
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:00:00",
+    "data": 49.2687,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:01:00",
+    "data": 77.557,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:02:00",
+    "data": 37.7218,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:03:00",
+    "data": 27.0186,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:04:00",
+    "data": 89.5355,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:05:00",
+    "data": 22.9172,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:06:00",
+    "data": 64.2684,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:07:00",
+    "data": 19.6335,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:08:00",
+    "data": 3.0907,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:09:00",
+    "data": 32.6598,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:10:00",
+    "data": 28.2147,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:11:00",
+    "data": 61.3722,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:12:00",
+    "data": 33.2686,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:13:00",
+    "data": 19.1756,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:14:00",
+    "data": 18.7384,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:15:00",
+    "data": 17.6969,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:16:00",
+    "data": 97.4549,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:17:00",
+    "data": 76.5995,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:18:00",
+    "data": 85.7467,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:19:00",
+    "data": 25.957,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:20:00",
+    "data": 96.0083,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:21:00",
+    "data": 15.2355,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:22:00",
+    "data": 18.8174,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:23:00",
+    "data": 35.8022,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:24:00",
+    "data": 64.3242,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:25:00",
+    "data": 95.2285,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:26:00",
+    "data": 45.2083,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:27:00",
+    "data": 29.0206,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:28:00",
+    "data": 96.4478,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:29:00",
+    "data": 83.0614,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:30:00",
+    "data": 26.7081,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:31:00",
+    "data": 62.4723,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:32:00",
+    "data": 91.6506,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:33:00",
+    "data": 46.0401,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:34:00",
+    "data": 86.2513,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:35:00",
+    "data": 75.1096,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:36:00",
+    "data": 32.0644,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:37:00",
+    "data": 47.1629,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:38:00",
+    "data": 37.3394,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:39:00",
+    "data": 91.2208,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:40:00",
+    "data": 66.9794,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:41:00",
+    "data": 42.8756,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:42:00",
+    "data": 48.3269,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:43:00",
+    "data": 40.2455,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:44:00",
+    "data": 85.2289,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:45:00",
+    "data": 71.0085,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:46:00",
+    "data": 80.4334,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:47:00",
+    "data": 60.7476,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:48:00",
+    "data": 49.7421,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:49:00",
+    "data": 70.3384,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:50:00",
+    "data": 76.1871,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:51:00",
+    "data": 50.1105,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:52:00",
+    "data": 21.0209,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:53:00",
+    "data": 85.0371,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:54:00",
+    "data": 37.7987,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:55:00",
+    "data": 6.5006,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:56:00",
+    "data": 51.6075,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:57:00",
+    "data": 67.9682,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:58:00",
+    "data": 43.5544,
+    "status": true
+  },
+  {
+    "userId": "5edd6f6923651b46d83a03c2",
+    "sensorId": "G-TA-101",
+    "aptId": "TA-101",
+    "type": "Gas",
+    "dateTime": "2020-06-15T22:59:00",
+    "data": 33.2184,
+    "status": true
+  }
+]

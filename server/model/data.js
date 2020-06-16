@@ -23,7 +23,7 @@ var Data = new Schema(
       required: true
     },
     data: {
-      type: String,
+      type: Number,
       required: true
     },
     status: {

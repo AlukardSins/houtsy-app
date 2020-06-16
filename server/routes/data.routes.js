@@ -27,7 +27,8 @@ dataRoute.route('/data-user').post((req, res) => {
       return res.sendStatus(204)
     } else {
       return res.status(200).json({
-        message: 'Datos de sensores registrados al usuario obtenidos'
+        message: 'Datos de sensores registrados al usuario obtenidos',
+        data: data
       })
     }
   })
