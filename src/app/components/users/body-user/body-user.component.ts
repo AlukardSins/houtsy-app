@@ -31,9 +31,14 @@ export class BodyUserComponent implements OnInit {
   gasId = ""
   energiaId = ""
   aguaId = ""
+  gasAPesos;
+  aguaAPesos;
+  energiaAPesos;
 
   ngOnInit (): void {
     this.getAllDataSensors()
+    console.log("Estado sensor = ", this.dataService.getStatus('5ee93b9bfde30c348cb1201e'));
+    
     const source = interval(60000)
     const text = 'Your Text Here'
     this.subscription = source.subscribe((val) => {
@@ -44,6 +49,33 @@ export class BodyUserComponent implements OnInit {
     })
   }
 
+  //Gas a $
+  conversionGasAPesos(){
+    let sum;
+    for (let i = 0; i < this.datosGas.length; i++) {
+      sum =+ this.datosGas[i];
+    }
+    this.gasAPesos = sum * (1938.62);
+    this.gasAPesos = this.gasAPesos.toFixed(2);  
+  }
+  // Agua a $
+  conversionAguaAPesos(){
+    let sum;
+    for (let i = 0; i < this.datosAgua.length; i++) {
+      sum =+ this.datosAgua[i];
+    }
+    this.aguaAPesos = sum * (2049.65);
+    this.aguaAPesos = this.aguaAPesos.toFixed(2);  
+  }
+  // Energia a $
+  conversionEnergiaAPesos(){
+    let sum;
+    for (let i = 0; i < this.datosEnergia.length; i++) {
+      sum =+ this.datosEnergia[i];
+    }
+    this.energiaAPesos = sum * (482.26);
+    this.energiaAPesos = this.energiaAPesos.toFixed(2);  
+  }
   
 
   //Abrir y cerrar agua
@@ -90,13 +122,16 @@ export class BodyUserComponent implements OnInit {
         if (dataSet.type === 'Water') {
           this.aguaId = dataSet.sensorId
           this.datosAgua.push(dataSet.data)
+          this.conversionAguaAPesos();
         } else if (dataSet.type === 'Energy') {
           this.energiaId = dataSet.sensorId
           console.log("idEnergia === ", this.energiaId);
           this.datosEnergia.push(dataSet.data)
+          this.conversionEnergiaAPesos();
         } else if (dataSet.type === 'Gas') {
           this.gasId = dataSet.sensorId
           this.datosGas.push(dataSet.data)
+          this.conversionGasAPesos();
         }
       })
       console.log('Chart data: ', this.lineChartData[0])

@@ -82,33 +82,41 @@ amqp.connect(rabbitURL, (err, conn) => {
       if (error) {
         console.log(error.message)
       } else {
-        ch.consume(
-          'mqtt-subscription-mosq-onGQPvgy4gVUvZz1PQqos0',
-          (data) => {
-            // Aqui hay que dividir el string data y llevarlo a la db
-            datos = data.content.toString().split(', ');
-            let datas = new dataModel();
-            datas.userId = datos[0];
-            datas.sensorId = datos[1];
-            datas.aptId = datos[2];
-            datas.type = datos[3];
-            datas.dateTime = Date(datos[4]);
-            datas.data = Number(datos[5]);
-            if(datos[6] === 'true'){
-              datas.status = true
-            }else{
-              datas.status = false
-            }
-            datas.save((error, doc)=>{
-              if(error){
-                console.log(error);
+        var exc = 'amq.topic'
+        ch.assertExchange(exc, 'topic', {durable: true});
+        ch.assertQueue('', {exclusive: true}, (err, res) => {
+          console.log(res);
+          if (err) {
+            console.log(err);
+          }
+          ch.bindQueue(res.queue, exc, 'sensor-data')
+          ch.consume( res.queue ,
+            (data) => {
+              // Aqui hay que dividir el string data y llevarlo a la db
+              datos = data.content.toString().split(', ');
+              let datas = new dataModel();
+              datas.userId = datos[0];
+              datas.sensorId = datos[1];
+              datas.aptId = datos[2];
+              datas.type = datos[3];
+              datas.dateTime = Date(datos[4]);
+              datas.data = Number(datos[5]);
+              if(datos[6] === 'true'){
+                datas.status = true
+              }else{
+                datas.status = false
               }
-              datas = null;
-            });
-            console.log('Message: ', datas)
-          },
-          { noAck: true }
-        )
+              datas.save((error, doc)=>{
+                if(error){
+                  console.log(error);
+                }
+                datas = null;
+              });
+              console.log('Message: ', datas)
+            },
+            { noAck: false }
+          )
+        })
       }
     })
   }

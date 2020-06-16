@@ -75,25 +75,25 @@ dataRoute.route('/sensor-open').post((req, res) => {
 
   console.log('Entre!!!!!!!!!!!!!!!!!');
   
-//   amqp.connect(rabbitURL, function(error0, connection) {
+  amqp.connect(rabbitURL, function(error0, connection) {
   
-//   if (error0) {
-//     throw error0;
-//   }
-//   connection.createChannel(function(error1, channel) {
-//     if (error1) {
-//       throw error1;
-//     }
+  if (error0) {
+    throw error0;
+  }
+  connection.createChannel(function(error1, channel) {
+    if (error1) {
+      throw error1;
+    }
     
 
-//     channel.assertQueue('cualquiecosa', {
-//       durable: false
-//     });
+    channel.assertQueue('cualquiecosa', {
+      durable: false
+    });
 
-//     channel.sendToQueue('cualquiercosa', "abrir");
-//     console.log(" [x] Sent %s", "abrir");
-//   });
-// });
+    channel.sendToQueue('cualquiercosa', "abrir");
+    console.log(" [x] Sent %s", "abrir");
+  });
+});
   Data.findByIdAndUpdate({ sensorId: req.body._id }, { status: true }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
