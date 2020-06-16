@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const dataRoute = express.Router()
 var amqp = require('amqplib/callback_api')
-const rabbitURL = 'amqp://localhost:15672'
+const rabbitURL = 'amqp://zjvtghki:uIDw7fq4y-H8XbLrhcSAMDVNH5-K3llA@shark.rmq.cloudamqp.com/zjvtghki'
 
 // Import Data model
 const Data = require('../model/data')
@@ -64,7 +64,7 @@ dataRoute.route('/sensor-status').get((req, res) => {
 
 // Send Open / Close command
 dataRoute.route('/sensor-open').post(async(req, res) => {
-  amqp.connect(rabbitURL, function(error0, connection) {console.log(error0);
+  amqp.connect(rabbitURL, function(error0, connection) {
   
   if (error0) {
     throw error0;

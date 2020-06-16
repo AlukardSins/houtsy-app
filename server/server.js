@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const dbConfig = require('./db/config')
-const rabbitURL = 'amqp://localhost:15672'
+const rabbitURL = 'amqp://zjvtghki:uIDw7fq4y-H8XbLrhcSAMDVNH5-K3llA@shark.rmq.cloudamqp.com/zjvtghki'
 
 var amqp = require('amqplib/callback_api')
 
