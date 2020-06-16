@@ -16,12 +16,8 @@ export class UserService {
     return this.http.post(actaulUrl, { email: email })
   }
 
-<<<<<<< HEAD
-  
-=======
   datosUsuario (id){
     let actualUrl =`http://localhost:8000/api/user/get-user`
     return this.http.post(actualUrl,{id: id})
   }
->>>>>>> 1a9f5ddd47e9a992570dfcb972c22a1ecbbf4817
 }
