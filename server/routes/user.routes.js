@@ -30,8 +30,8 @@ userRoute.route('/').get((req, res) => {
 })
 
 // Get single user
-userRoute.route('/get-user/:id').get((req, res) => {
-  User.findById(req.params.id, (error, user) => {
+userRoute.route('/get-user').post((req, res) => {
+  User.findById(req.body.id, (error, user) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra el usuario', error: error })
     } else if (user.length === 0) {
