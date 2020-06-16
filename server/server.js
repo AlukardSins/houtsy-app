@@ -46,7 +46,7 @@ app.use('/api/user', userRoute)
 app.use('/api/data', dataRoute)
 
 // PORT
-const port =  8000
+const port = 8000
 
 app.listen(port, () => {
   console.log('Connected to port ' + port)
@@ -67,22 +67,33 @@ app.get('*', (req, res) => {
 })
 
 // error handler
-app.use(function (err, req, res) {
+app.use((err, req, res) => {
   console.error(err.message)
   if (!err.statusCode) err.statusCode = 500
   res.status(err.statusCode).send(err.message)
 })
 
-amqp.connect(rabbitURL, function (err, conn) {
-  conn.createChannel(function (err, ch) {
-    ch.consume('sensor-data', function (data) {
-      console.log('.....')
-      setTimeout(function(){
-        //aqui hay que dividir el string data y llevarlo a la db
-  
-        console.log("Message:", data.content.toString())
-      },4000);
-      },{ noAck: true }
-    )
-  })
+amqp.connect(rabbitURL, (err, conn) => {
+  if (err) {
+    console.log(err.message)
+  } else {
+    conn.createChannel((err, ch) => {
+      if (err) {
+        console.log(err.message)
+      } else {
+        ch.consume(
+          'sensor-data',
+          function (data) {
+            console.log('.....')
+            setTimeout(function () {
+              // Aqui hay que dividir el string data y llevarlo a la db
+
+              console.log('Message:', data.content.toString())
+            }, 4000)
+          },
+          { noAck: true }
+        )
+      }
+    })
+  }
 })
