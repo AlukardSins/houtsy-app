@@ -6,6 +6,7 @@ const rabbitURL = 'amqp://zjvtghki:uIDw7fq4y-H8XbLrhcSAMDVNH5-K3llA@shark.rmq.cl
 
 // Import Data model
 const Data = require('../model/data')
+const { ChangeDetectionStrategy } = require('@angular/core')
 
 // Add Data
 dataRoute.route('/add-sensor-data').post((req, res) => {
@@ -67,8 +68,25 @@ dataRoute.route('/sensor-status').post((req, res) => {
 
 // Send Open / Close command
 dataRoute.route('/sensor-open').post((req, res) => {
-  console.log("entro en sensor");
+  amqp.connect(rabbitURL, function(error0, connection) {
+    if (error0) {
+      throw error0;
+    }
+    connection.createChannel(function(error1, channel) {
+      if (error1) {
+        throw error1;
+      }
+      var exc = 'amq.topic';
+      var key = 'cambiar-estados'; 
   
+      channel.assertExchange(exc, "topic" , {
+        durable: true
+      });
+  
+      channel.publish(exc, key, Buffer.from("abrir"));
+      console.log(" [x] Sent %s", key, "abrir");
+    });
+  }); 
   Data.updateMany({ sensorId: req.body.sensorId }, { status: true }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
@@ -84,6 +102,25 @@ dataRoute.route('/sensor-open').post((req, res) => {
 })
 
 dataRoute.route('/sensor-close').post((req, res) => {
+  amqp.connect(rabbitURL, function(error0, connection) {
+    if (error0) {
+      throw error0;
+    }
+    connection.createChannel(function(error1, channel) {
+      if (error1) {
+        throw error1;
+      }
+      var exc = 'amq.topic';
+      var key = 'cambiar-estados'; 
+  
+      channel.assertExchange(exc, "topic" , {
+        durable: true
+      });
+  
+      channel.publish(exc, key, Buffer.from("cerrar"));
+      console.log(" [x] Sent %s", key, "cerrar");
+    });
+  }); 
   Data.updateMany({ sensorId: req.body.sensorId }, { status: false }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
