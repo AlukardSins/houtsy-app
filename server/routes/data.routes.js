@@ -67,6 +67,8 @@ dataRoute.route('/sensor-status').post((req, res) => {
 
 // Send Open / Close command
 dataRoute.route('/sensor-open').post((req, res) => {
+  console.log("entro en sensor");
+  
   Data.updateMany({ sensorId: req.body.sensorId }, { status: true }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
@@ -82,32 +84,7 @@ dataRoute.route('/sensor-open').post((req, res) => {
 })
 
 dataRoute.route('/sensor-close').post((req, res) => {
-<<<<<<< HEAD
-  console.log(cerrado);
-  
-  amqp.connect(rabbitURL, function(error0, connection) {
-    if (error0) {
-      throw error0;
-    }
-    connection.createChannel(function(error1, channel) {
-      if (error1) {
-        throw error1;
-      }
-      
-  
-      channel.assertQueue({ _id: req.body._id }, {
-        durable: false
-      });
-  
-      channel.sendToQueue({ _id: req.body._id }, "cerrar");
-      console.log(" [x] Sent %s", "cerrar");
-    });
-  });
-  
-  Data.findByIdAndUpdate({ _id: req.body._id }, { status: false }, (error, data) => {
-=======
   Data.updateMany({ sensorId: req.body.sensorId }, { status: false }, (error, data) => {
->>>>>>> 5d17afc84d9ae63c9c56a61e9537e48565fa331b
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
     } else if (data.length === 0) {
