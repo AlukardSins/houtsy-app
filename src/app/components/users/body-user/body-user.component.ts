@@ -77,46 +77,34 @@ export class BodyUserComponent implements OnInit {
 
   //Abrir y cerrar agua
   abrirAgua () {
-    this.dataService.openService(this.aguaId).subscribe(res => {
-      
-    })
+    this.dataService.openService(this.aguaId).subscribe(res => {})
     this.agua = true
   }
 
   cerrarAgua () {
-    this.dataService.closeService(this.aguaId).subscribe(res => {
-      
-    })
+    this.dataService.closeService(this.aguaId).subscribe(res => {})
     this.agua = false
   }
 
   //abrir y cerrar gas
   abrirGas () {
-    this.dataService.openService(this.gasId).subscribe(res => {
-      
-    })
+    this.dataService.openService(this.gasId).subscribe(res => {})
     this.gas = true
   }
 
   cerrarGas () {
-    this.dataService.closeService(this.gasId).subscribe(res => {
-      
-    })
+    this.dataService.closeService(this.gasId).subscribe(res => {})
     this.gas = false
   }
 
   //abrir y cerrar energia
   abrirEnergia () {
-    this.dataService.openService(this.energiaId).subscribe(res => {
-      
-    })
+    this.dataService.openService(this.energiaId).subscribe(res => {})
     this.energia = true
   }
 
   cerrarEnergia () {
-    this.dataService.closeService(this.energiaId).subscribe(res => {
-      
-    })
+    this.dataService.closeService(this.energiaId).subscribe(res => {})
     this.energia = false
   }
 
