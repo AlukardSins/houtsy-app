@@ -19,8 +19,11 @@ mongoose
   })
   .then(
     () => {
+      console.log("Database connected sucessfully");
     },
     (error) => {
+      console.log(error);
+      
     }
   )
 
@@ -48,6 +51,8 @@ app.use('/api/data', dataRoute)
 const port = 8000
 
 app.listen(port, () => {
+  console.log("Connected to port 8000");
+  
 })
 
 // Find 404 and hand over to error handler
