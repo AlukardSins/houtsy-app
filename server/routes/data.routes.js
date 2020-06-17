@@ -1,13 +1,11 @@
 const express = require('express')
 const app = express()
-
 const dataRoute = express.Router()
 var amqp = require('amqplib/callback_api')
 const rabbitURL = 'amqp://zjvtghki:uIDw7fq4y-H8XbLrhcSAMDVNH5-K3llA@shark.rmq.cloudamqp.com/zjvtghki'
 
 // Import Data model
 const Data = require('../model/data')
-
 
 // Add Data
 dataRoute.route('/add-sensor-data').post((req, res) => {
@@ -55,8 +53,8 @@ dataRoute.route('/data-apt').post((req, res) => {
 })
 
 // Get Sensor status
-dataRoute.route('/sensor-status').get((req, res) => {
-  Data.findById(req.body._id, (error, data) => {
+dataRoute.route('/sensor-status').post((req, res) => {
+  Data.findOne({ sensorId: req.body.sensorId }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'Error de envio', error: error })
     } else if (data.length === 0) {
@@ -69,45 +67,22 @@ dataRoute.route('/sensor-status').get((req, res) => {
 
 // Send Open / Close command
 dataRoute.route('/sensor-open').post((req, res) => {
-
-  
-
-
-  console.log('Entre!!!!!!!!!!!!!!!!!');
-  
-  amqp.connect(rabbitURL, function(error0, connection) {
-  
-  if (error0) {
-    throw error0;
-  }
-  connection.createChannel(function(error1, channel) {
-    if (error1) {
-      throw error1;
-    }
-    
-
-    channel.assertQueue('cualquiecosa', {
-      durable: false
-    });
-
-    channel.sendToQueue('cualquiercosa', "abrir");
-    console.log(" [x] Sent %s", "abrir");
-  });
-});
-  Data.findByIdAndUpdate({ sensorId: req.body._id }, { status: true }, (error, data) => {
+  Data.updateMany({ sensorId: req.body.sensorId }, { status: true }, (error, data) => {
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
     } else if (data.length === 0) {
       return res.sendStatus(204)
     } else {
       return res.status(200).json({
-        message: 'Sensor activado'
+        message: 'Sensor activado',
+        dataModified: data.nModified
       })
     }
   })
 })
 
 dataRoute.route('/sensor-close').post((req, res) => {
+<<<<<<< HEAD
   console.log(cerrado);
   
   amqp.connect(rabbitURL, function(error0, connection) {
@@ -130,14 +105,17 @@ dataRoute.route('/sensor-close').post((req, res) => {
   });
   
   Data.findByIdAndUpdate({ _id: req.body._id }, { status: false }, (error, data) => {
+=======
+  Data.updateMany({ sensorId: req.body.sensorId }, { status: false }, (error, data) => {
+>>>>>>> 5d17afc84d9ae63c9c56a61e9537e48565fa331b
     if (error) {
       return res.status(500).json({ message: 'No se encuentra la informacion', error: error })
     } else if (data.length === 0) {
       return res.sendStatus(204)
     } else {
-      publishToQueue({ _id: req.body._id }, "cerrar");
       return res.status(200).json({
-         message: 'Sensor desactivado'
+        message: 'Sensor desactivado',
+        dataModified: data.nModified
       })
     }
   })

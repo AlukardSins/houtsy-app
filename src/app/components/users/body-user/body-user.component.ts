@@ -28,17 +28,17 @@ export class BodyUserComponent implements OnInit {
   datosEnergia = []
   datosGas = []
   datos = []
-  gasId = ""
-  energiaId = ""
-  aguaId = ""
-  gasAPesos;
-  aguaAPesos;
-  energiaAPesos;
+  gasId = ''
+  energiaId = ''
+  aguaId = ''
+  gasAPesos
+  aguaAPesos
+  energiaAPesos
 
   ngOnInit (): void {
     this.getAllDataSensors()
-    console.log("Estado sensor = ", this.dataService.getStatus('5ee93b9bfde30c348cb1201e'));
-    
+    console.log('Estado sensor = ', this.dataService.getStatus('5ee93b9bfde30c348cb1201e'))
+
     const source = interval(60000)
     const text = 'Your Text Here'
     this.subscription = source.subscribe((val) => {
@@ -50,53 +50,52 @@ export class BodyUserComponent implements OnInit {
   }
 
   //Gas a $
-  conversionGasAPesos(){
-    let sum;
+  conversionGasAPesos () {
+    let sum
     for (let i = 0; i < this.datosGas.length; i++) {
-      sum =+ this.datosGas[i];
+      sum = +this.datosGas[i]
     }
-    this.gasAPesos = sum * (1938.62);
-    this.gasAPesos = this.gasAPesos.toFixed(2);  
+    this.gasAPesos = sum * 1938.62
+    this.gasAPesos = this.gasAPesos.toFixed(2)
   }
   // Agua a $
-  conversionAguaAPesos(){
-    let sum;
+  conversionAguaAPesos () {
+    let sum
     for (let i = 0; i < this.datosAgua.length; i++) {
-      sum =+ this.datosAgua[i];
+      sum = +this.datosAgua[i]
     }
-    this.aguaAPesos = sum * (2049.65);
-    this.aguaAPesos = this.aguaAPesos.toFixed(2);  
+    this.aguaAPesos = sum * 2049.65
+    this.aguaAPesos = this.aguaAPesos.toFixed(2)
   }
   // Energia a $
-  conversionEnergiaAPesos(){
-    let sum;
+  conversionEnergiaAPesos () {
+    let sum
     for (let i = 0; i < this.datosEnergia.length; i++) {
-      sum =+ this.datosEnergia[i];
+      sum = +this.datosEnergia[i]
     }
-    this.energiaAPesos = sum * (482.26);
-    this.energiaAPesos = this.energiaAPesos.toFixed(2);  
+    this.energiaAPesos = sum * 482.26
+    this.energiaAPesos = this.energiaAPesos.toFixed(2)
   }
-  
 
   //Abrir y cerrar agua
   abrirAgua () {
-    this.dataService.openService(this.datosAgua[0]._id)
+    this.dataService.openService(this.datosAgua[0].sensorId)
     this.agua = true
   }
 
   cerrarAgua () {
-    this.dataService.closeService(this.datosAgua[0]._id)
+    this.dataService.closeService(this.datosAgua[0].sensorId)
     this.agua = false
   }
 
   //abrir y cerrar gas
   abrirGas () {
-    this.dataService.openService(this.datosGas[0]._id)
+    this.dataService.openService(this.datosGas[0].sensorId)
     this.gas = true
   }
 
   cerrarGas () {
-    this.dataService.closeService(this.datosGas[0]._id)
+    this.dataService.closeService(this.datosGas[0].sensorId)
     this.gas = false
   }
 
@@ -117,27 +116,25 @@ export class BodyUserComponent implements OnInit {
     this.dataService.getData(userId).subscribe((res: any) => {
       console.log({ res })
       res.data.map((dataSet) => {
-        console.log("dataSet", dataSet);
-        
         if (dataSet.type === 'Water') {
           this.aguaId = dataSet.sensorId
           this.datosAgua.push(dataSet.data)
-          this.conversionAguaAPesos();
+          this.conversionAguaAPesos()
         } else if (dataSet.type === 'Energy') {
           this.energiaId = dataSet.sensorId
-          console.log("idEnergia === ", this.energiaId);
+          console.log('idEnergia ===', dataSet.sensorId)
           this.datosEnergia.push(dataSet.data)
-          this.conversionEnergiaAPesos();
+          this.conversionEnergiaAPesos()
         } else if (dataSet.type === 'Gas') {
           this.gasId = dataSet.sensorId
           this.datosGas.push(dataSet.data)
-          this.conversionGasAPesos();
+          this.conversionGasAPesos()
         }
       })
       console.log('Chart data: ', this.lineChartData[0])
     })
     console.log(this.datos)
-    
+
     console.log('Agua', this.datosAgua)
     console.log('Energia', this.datosEnergia)
     console.log('Gas', this.datosGas)
@@ -147,7 +144,7 @@ export class BodyUserComponent implements OnInit {
 
   //chart
   lineChartData: ChartDataSets[] = [
-    { data: this.datosAgua, label: 'Agua M3/s'},
+    { data: this.datosAgua, label: 'Agua M3/s' },
     { data: this.datosEnergia, label: 'Energia kWh' },
     { data: this.datosGas, label: 'Gas M3/s' }
   ]

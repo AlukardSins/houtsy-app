@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core'
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http'
-import { Observable } from 'rxjs'
+import { Observable, concat } from 'rxjs'
+
+const URI = 'http://localhost:8000/api/data'
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+  constructor (private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getData(userId){
-    let actaulUrl = `http://localhost:8000/api/data/data-user`
-    return this.http.post(actaulUrl, {userId: userId});
+  getData (userId) {
+    return this.http.post(URI + '/data-user', { userId: userId })
   }
 
+<<<<<<< HEAD
   getStatus(_id): Observable<any>{
     let statusUri = `http://localhost:8000/api/data/sensor-status`
     return this.http.get(statusUri, _id);
@@ -30,6 +31,19 @@ export class DataService {
     console.log("\n\n\nopenEEEEE: ", _id, "\n\n\n\n\n");  
     let openUri = `http://localhost:8000/api/data/sensor-open`
     this.http.post(openUri, {_id});
+=======
+  getStatus (sensorId): Observable<any> {
+    return this.http.post(URI + '/sensor-status', { sensorId: sensorId })
   }
 
+  closeService (sensorId): void {
+    console.log('CLOSED: ', sensorId)
+    this.http.post(URI + '/sensor-open', { sensorId: sensorId })
+  }
+
+  openService (sensorId): void {
+    console.log('OPENED: ', sensorId)
+    this.http.post(URI + '/sensor-close', { sensorId: sensorId })
+>>>>>>> 5d17afc84d9ae63c9c56a61e9537e48565fa331b
+  }
 }

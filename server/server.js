@@ -5,7 +5,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const dbConfig = require('./db/config')
 const rabbitURL = 'amqp://zjvtghki:uIDw7fq4y-H8XbLrhcSAMDVNH5-K3llA@shark.rmq.cloudamqp.com/zjvtghki'
-const dataModel = require('./model/data')
+const DataModel = require('./model/data')
 
 var amqp = require('amqplib/callback_api')
 
@@ -83,35 +83,35 @@ amqp.connect(rabbitURL, (err, conn) => {
         console.log(error.message)
       } else {
         var exc = 'amq.topic'
-        ch.assertExchange(exc, 'topic', {durable: true});
-        ch.assertQueue('', {exclusive: true}, (err, res) => {
-          console.log(res);
+        ch.assertExchange(exc, 'topic', { durable: true })
+        ch.assertQueue('', { exclusive: true }, (err, res) => {
           if (err) {
-            console.log(err);
+            console.log(err)
           }
           ch.bindQueue(res.queue, exc, 'sensor-data')
-          ch.consume( res.queue ,
+          ch.consume(
+            res.queue,
             (data) => {
               // Aqui hay que dividir el string data y llevarlo a la db
-              datos = data.content.toString().split(', ');
-              let datas = new dataModel();
-              datas.userId = datos[0];
-              datas.sensorId = datos[1];
-              datas.aptId = datos[2];
-              datas.type = datos[3];
-              datas.dateTime = Date(datos[4]);
-              datas.data = Number(datos[5]);
-              if(datos[6] === 'true'){
+              const datos = data.content.toString().split(', ')
+              let datas = new DataModel()
+              datas.userId = datos[0]
+              datas.sensorId = datos[1]
+              datas.aptId = datos[2]
+              datas.type = datos[3]
+              datas.dateTime = Date(datos[4])
+              datas.data = Number(datos[5])
+              if (datos[6] === 'true') {
                 datas.status = true
-              }else{
+              } else {
                 datas.status = false
               }
-              datas.save((error, doc)=>{
-                if(error){
-                  console.log(error);
+              datas.save((error, doc) => {
+                if (error) {
+                  console.log(error)
                 }
-                datas = null;
-              });
+                datas = null
+              })
               console.log('Message: ', datas)
             },
             { noAck: false }
