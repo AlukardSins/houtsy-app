@@ -21,7 +21,6 @@ dataRoute.route('/add-sensor-data').post((req, res) => {
 
 // Get all data assigned to a user
 dataRoute.route('/data-user').post((req, res) => {
-  console.log("data obtenida",{ userId: req.body.userId } );
   
   Data.find({ userId: req.body.userId }, (error, data) => {
     if (error) {
@@ -84,7 +83,6 @@ dataRoute.route('/sensor-open').post((req, res) => {
       });
   
       channel.publish(exc, key, Buffer.from("abrir"));
-      console.log(" [x] Sent %s", key, "abrir");
     });
   }); 
   Data.updateMany({ sensorId: req.body.sensorId }, { status: true }, (error, data) => {
@@ -118,7 +116,6 @@ dataRoute.route('/sensor-close').post((req, res) => {
       });
   
       channel.publish(exc, key, Buffer.from("cerrar"));
-      console.log(" [x] Sent %s", key, "cerrar");
     });
   }); 
   Data.updateMany({ sensorId: req.body.sensorId }, { status: false }, (error, data) => {

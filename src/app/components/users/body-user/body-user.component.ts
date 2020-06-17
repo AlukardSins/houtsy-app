@@ -37,14 +37,12 @@ export class BodyUserComponent implements OnInit {
 
   ngOnInit (): void {
     this.getAllDataSensors()
-    console.log('Estado sensor = ', this.dataService.getStatus('5ee93b9bfde30c348cb1201e'))
 
     const source = interval(60000)
     const text = 'Your Text Here'
     this.subscription = source.subscribe((val) => {
       let userId = localStorage.getItem('userToken')
       this.dataService.getData(userId).subscribe((res: any) => {
-        console.log({ res })
       })
     })
   }
@@ -80,7 +78,6 @@ export class BodyUserComponent implements OnInit {
   //Abrir y cerrar agua
   abrirAgua () {
     this.dataService.openService(this.aguaId).subscribe(res => {
-      console.log("retorno closed", res);
       
     })
     this.agua = true
@@ -88,7 +85,6 @@ export class BodyUserComponent implements OnInit {
 
   cerrarAgua () {
     this.dataService.closeService(this.aguaId).subscribe(res => {
-      console.log("retorno closed", res);
       
     })
     this.agua = false
@@ -97,7 +93,6 @@ export class BodyUserComponent implements OnInit {
   //abrir y cerrar gas
   abrirGas () {
     this.dataService.openService(this.gasId).subscribe(res => {
-      console.log("retorno closed", res);
       
     })
     this.gas = true
@@ -105,7 +100,6 @@ export class BodyUserComponent implements OnInit {
 
   cerrarGas () {
     this.dataService.closeService(this.gasId).subscribe(res => {
-      console.log("retorno closed", res);
       
     })
     this.gas = false
@@ -114,7 +108,6 @@ export class BodyUserComponent implements OnInit {
   //abrir y cerrar energia
   abrirEnergia () {
     this.dataService.openService(this.energiaId).subscribe(res => {
-      console.log("retorno closed", res);
       
     })
     this.energia = true
@@ -122,7 +115,6 @@ export class BodyUserComponent implements OnInit {
 
   cerrarEnergia () {
     this.dataService.closeService(this.energiaId).subscribe(res => {
-      console.log("retorno closed", res);
       
     })
     this.energia = false
@@ -132,7 +124,6 @@ export class BodyUserComponent implements OnInit {
     let userId = localStorage.getItem('userToken')
 
     this.dataService.getData(userId).subscribe((res: any) => {
-      console.log({ res })
       res.data.map((dataSet) => {
         if (dataSet.type === 'Water') {
           this.aguaId = dataSet.sensorId
@@ -140,7 +131,6 @@ export class BodyUserComponent implements OnInit {
           this.conversionAguaAPesos()
         } else if (dataSet.type === 'Energy') {
           this.energiaId = dataSet.sensorId
-          console.log('idEnergia ===', dataSet.sensorId)
           this.datosEnergia.push(dataSet.data)
           this.conversionEnergiaAPesos()
         } else if (dataSet.type === 'Gas') {
@@ -149,13 +139,8 @@ export class BodyUserComponent implements OnInit {
           this.conversionGasAPesos()
         }
       })
-      console.log('Chart data: ', this.lineChartData[0])
     })
-    console.log(this.datos)
 
-    console.log('Agua', this.datosAgua)
-    console.log('Energia', this.datosEnergia)
-    console.log('Gas', this.datosGas)
   }
 
   ngOnDestroy (): void {}
@@ -267,10 +252,8 @@ export class BodyUserComponent implements OnInit {
 
   // events
   chartClicked ({ event, active }: { event: MouseEvent; active: {}[] }): void {
-    console.log(event, active)
   }
 
   chartHovered ({ event, active }: { event: MouseEvent; active: {}[] }): void {
-    console.log(event, active)
   }
 }

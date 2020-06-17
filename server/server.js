@@ -19,10 +19,8 @@ mongoose
   })
   .then(
     () => {
-      console.log('Database connected sucessfully')
     },
     (error) => {
-      console.log('Could not connected to database : ' + error)
     }
   )
 
@@ -50,7 +48,6 @@ app.use('/api/data', dataRoute)
 const port = 8000
 
 app.listen(port, () => {
-  console.log('Connected to port ' + port)
 })
 
 // Find 404 and hand over to error handler
@@ -76,17 +73,14 @@ app.use((err, req, res) => {
 
 amqp.connect(rabbitURL, (err, conn) => {
   if (err) {
-    console.log(err.message)
   } else {
     conn.createChannel((error, ch) => {
       if (error) {
-        console.log(error.message)
       } else {
         var exc = 'amq.topic'
         ch.assertExchange(exc, 'topic', { durable: true })
         ch.assertQueue('', { exclusive: true }, (err, res) => {
           if (err) {
-            console.log(err)
           }
           ch.bindQueue(res.queue, exc, 'sensor-data')
           ch.consume(
@@ -108,11 +102,9 @@ amqp.connect(rabbitURL, (err, conn) => {
               }
               datas.save((error, doc) => {
                 if (error) {
-                  console.log(error)
                 }
                 datas = null
               })
-              console.log('Message: ', datas)
             },
             { noAck: false }
           )
